@@ -12,23 +12,37 @@ class SettingSeeder extends Seeder
     {
         $settings = [
 
-            // GENERAL
+            /*
+            |--------------------------------------------------------------------------
+            | GENERAL
+            |--------------------------------------------------------------------------
+            */
+
             [
                 'group' => 'general',
                 'key' => 'site_name',
-                'label' => 'Tên website',
+                'label' => 'Website Name',
                 'type' => 'text',
-                'vi' => 'Blog Du Lịch',
-                'en' => 'Travel Blog',
+                'vi' => 'Senverse',
+                'en' => 'Senverse',
             ],
 
             [
                 'group' => 'general',
                 'key' => 'site_slogan',
-                'label' => 'Slogan website',
+                'label' => 'Website Slogan',
                 'type' => 'text',
-                'vi' => 'Khám phá địa điểm đẹp',
-                'en' => 'Explore beautiful destinations',
+                'vi' => 'Giải pháp vận hành toàn diện cho Nail Salon',
+                'en' => 'Everything Your Salon Needs.',
+            ],
+
+            [
+                'group' => 'general',
+                'key' => 'company_name',
+                'label' => 'Company Name',
+                'type' => 'text',
+                'vi' => 'Senverse LLC',
+                'en' => 'Senverse LLC',
             ],
 
             [
@@ -49,35 +63,99 @@ class SettingSeeder extends Seeder
                 'en' => '',
             ],
 
-            // HOME SEO
+            [
+                'group' => 'general',
+                'key' => 'phone',
+                'label' => 'Phone',
+                'type' => 'text',
+                'vi' => '(352) 426-2498',
+                'en' => '(352) 426-2498',
+            ],
+
+            [
+                'group' => 'general',
+                'key' => 'email',
+                'label' => 'Email',
+                'type' => 'text',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'general',
+                'key' => 'address',
+                'label' => 'Address',
+                'type' => 'textarea',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'general',
+                'key' => 'copyright',
+                'label' => 'Copyright',
+                'type' => 'text',
+                'vi' => '© Senverse LLC. All rights reserved.',
+                'en' => '© Senverse LLC. All rights reserved.',
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | SEO
+            |--------------------------------------------------------------------------
+            */
+
             [
                 'group' => 'seo',
                 'key' => 'home_meta_title',
-                'label' => 'Meta Title Trang Chủ',
+                'label' => 'Home Meta Title',
                 'type' => 'text',
-                'vi' => 'Blog Du Lịch Việt Nam',
-                'en' => 'Vietnam Travel Blog',
+                'vi' => 'Senverse POS',
+                'en' => 'Senverse POS',
             ],
 
             [
                 'group' => 'seo',
                 'key' => 'home_meta_description',
-                'label' => 'Meta Description Trang Chủ',
+                'label' => 'Home Meta Description',
                 'type' => 'textarea',
-                'vi' => 'Khám phá du lịch Việt Nam, khách sạn, địa điểm đẹp và kinh nghiệm du lịch.',
-                'en' => 'Explore Vietnam travel destinations, hotels and travel experiences.',
+                'vi' => 'Giải pháp POS, thanh toán và marketing dành cho Nail Salon.',
+                'en' => 'POS, payment and marketing solutions for nail salons.',
             ],
 
             [
                 'group' => 'seo',
                 'key' => 'home_meta_keywords',
-                'label' => 'Meta Keywords',
+                'label' => 'Home Meta Keywords',
                 'type' => 'textarea',
-                'vi' => 'du lịch, địa điểm đẹp, khách sạn',
-                'en' => 'travel, destination, hotel',
+                'vi' => 'POS, Nail Salon, Marketing, Merchant Services',
+                'en' => 'POS, Nail Salon, Marketing, Merchant Services',
             ],
 
-            // SOCIAL
+            [
+                'group' => 'seo',
+                'key' => 'default_og_image',
+                'label' => 'Default OG Image',
+                'type' => 'image',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'seo',
+                'key' => 'robots_default',
+                'label' => 'Robots',
+                'type' => 'text',
+                'vi' => 'index,follow',
+                'en' => 'index,follow',
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | SOCIAL
+            |--------------------------------------------------------------------------
+            */
+
             [
                 'group' => 'social',
                 'key' => 'facebook_url',
@@ -89,8 +167,26 @@ class SettingSeeder extends Seeder
 
             [
                 'group' => 'social',
+                'key' => 'instagram_url',
+                'label' => 'Instagram URL',
+                'type' => 'text',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'social',
+                'key' => 'linkedin_url',
+                'label' => 'LinkedIn URL',
+                'type' => 'text',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'social',
                 'key' => 'youtube_url',
-                'label' => 'Youtube URL',
+                'label' => 'YouTube URL',
                 'type' => 'text',
                 'vi' => '',
                 'en' => '',
@@ -105,11 +201,16 @@ class SettingSeeder extends Seeder
                 'en' => '',
             ],
 
-            // SCHEMA
+            /*
+            |--------------------------------------------------------------------------
+            | SCHEMA
+            |--------------------------------------------------------------------------
+            */
+
             [
                 'group' => 'schema',
                 'key' => 'schema_enable',
-                'label' => 'Bật Schema',
+                'label' => 'Enable Schema',
                 'type' => 'boolean',
                 'vi' => '1',
                 'en' => '1',
@@ -124,15 +225,44 @@ class SettingSeeder extends Seeder
                 'en' => 'Organization',
             ],
 
-            // SCRIPT
+            /*
+            |--------------------------------------------------------------------------
+            | TRACKING
+            |--------------------------------------------------------------------------
+            */
+
             [
-                'group' => 'script',
+                'group' => 'tracking',
                 'key' => 'google_analytics',
                 'label' => 'Google Analytics',
                 'type' => 'textarea',
                 'vi' => '',
                 'en' => '',
             ],
+
+            [
+                'group' => 'tracking',
+                'key' => 'google_tag_manager',
+                'label' => 'Google Tag Manager',
+                'type' => 'textarea',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            [
+                'group' => 'tracking',
+                'key' => 'meta_pixel',
+                'label' => 'Meta Pixel',
+                'type' => 'textarea',
+                'vi' => '',
+                'en' => '',
+            ],
+
+            /*
+            |--------------------------------------------------------------------------
+            | CUSTOM SCRIPT
+            |--------------------------------------------------------------------------
+            */
 
             [
                 'group' => 'script',
@@ -151,14 +281,13 @@ class SettingSeeder extends Seeder
                 'vi' => '',
                 'en' => '',
             ],
-
         ];
 
         foreach ($settings as $item) {
 
             $setting = Setting::updateOrCreate(
                 [
-                    'key' => $item['key']
+                    'key' => $item['key'],
                 ],
                 [
                     'group' => $item['group'],
@@ -179,7 +308,6 @@ class SettingSeeder extends Seeder
                         'value' => $item[$locale] ?? '',
                     ]
                 );
-
             }
         }
     }

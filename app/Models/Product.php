@@ -2,52 +2,118 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Fillable
+    |--------------------------------------------------------------------------
+    */
+
     protected $fillable = [
+        /*
+        |--------------------------------------------------------------------------
+        | Relations
+        |--------------------------------------------------------------------------
+        */
+
         'category_id',
+
         'user_id',
 
+        /*
+        |--------------------------------------------------------------------------
+        | Media
+        |--------------------------------------------------------------------------
+        */
+
         'thumbnail_id',
+
         'banner_id',
+
         'og_image_id',
 
+        /*
+        |--------------------------------------------------------------------------
+        | Basic Information
+        |--------------------------------------------------------------------------
+        */
+
         'slug',
+
         'sku',
+
         'brand',
+
         'model',
-        'warranty',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Pricing
+        |--------------------------------------------------------------------------
+        */
 
         'price',
+
         'sale_price',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Inventory
+        |--------------------------------------------------------------------------
+        */
+
         'stock_quantity',
 
-        'status',
-        'is_featured',
-        'is_active',
-        'view_count',
+        /*
+        |--------------------------------------------------------------------------
+        | Display
+        |--------------------------------------------------------------------------
+        */
+
         'sort_order',
 
+        'is_featured',
+
+        'is_active',
+
+        /*
+        |--------------------------------------------------------------------------
+        | SEO
+        |--------------------------------------------------------------------------
+        */
+
         'canonical_url',
+
         'robots',
-
-        'schema_type',
-        'schema_data',
-    ];
-
-    protected $casts = [
-        'schema_data' => 'array',
-        'is_featured' => 'boolean',
-        'is_active' => 'boolean',
-        'price' => 'decimal:0',
-        'sale_price' => 'decimal:0',
     ];
 
     /*
     |--------------------------------------------------------------------------
-    | RELATIONS
+    | Casts
+    |--------------------------------------------------------------------------
+    */
+
+    protected $casts = [
+        'price' => 'decimal:2',
+
+        'sale_price' => 'decimal:2',
+
+        'stock_quantity' => 'integer',
+
+        'sort_order' => 'integer',
+
+        'is_featured' => 'boolean',
+
+        'is_active' => 'boolean',
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Translations
     |--------------------------------------------------------------------------
     */
 
@@ -66,15 +132,19 @@ class Product extends Model
 
     public function vi()
     {
-        return $this->hasOne(ProductTranslation::class)
-            ->where('locale', 'vi');
+        return $this->translation('vi');
     }
 
     public function en()
     {
-        return $this->hasOne(ProductTranslation::class)
-            ->where('locale', 'en');
+        return $this->translation('en');
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relations
+    |--------------------------------------------------------------------------
+    */
 
     public function category()
     {
@@ -85,6 +155,12 @@ class Product extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Media
+    |--------------------------------------------------------------------------
+    */
 
     public function thumbnail()
     {
@@ -101,29 +177,32 @@ class Product extends Model
         return $this->belongsTo(Media::class, 'og_image_id');
     }
 
-    public function media()
+    public function gallery()
     {
         return $this->morphToMany(Media::class, 'mediaable')
-            ->withPivot(['type', 'sort_order'])
-            ->withTimestamps();
-    }
-
-    public function galleryImages()
-    {
-        return $this->media()
-            ->wherePivot('type', 'gallery')
-            ->orderBy('mediaables.sort_order');
-    }
-
-    public function tags()
-    {
-        return $this->morphToMany(Tag::class, 'taggable')
+            ->withPivot([
+                'type',
+                'sort_order',
+            ])
             ->withTimestamps();
     }
 
     /*
     |--------------------------------------------------------------------------
-    | ACCESSORS
+    | Tags
+    |--------------------------------------------------------------------------
+    */
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable')
+            ->withPivot('sort_order')
+            ->withTimestamps();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Accessors
     |--------------------------------------------------------------------------
     */
 
@@ -145,19 +224,11 @@ class Product extends Model
             ?? optional($this->vi)->description;
     }
 
-    public function getSpecificationsAttribute()
-    {
-        return optional($this->translation)->specifications
-            ?? optional($this->vi)->specifications
-            ?? [];
-    }
-
-    public function getFeaturesAttribute()
-    {
-        return optional($this->translation)->features
-            ?? optional($this->vi)->features
-            ?? [];
-    }
+    /*
+    |--------------------------------------------------------------------------
+    | Pricing Helpers
+    |--------------------------------------------------------------------------
+    */
 
     public function getFinalPriceAttribute()
     {
@@ -166,27 +237,40 @@ class Product extends Model
 
     public function getDiscountPercentAttribute()
     {
-        if (!$this->price || !$this->sale_price || $this->sale_price >= $this->price) {
+        if (!$this->sale_price || !$this->price) {
             return 0;
         }
 
-        return round((($this->price - $this->sale_price) / $this->price) * 100);
+        return round(
+            (($this->price - $this->sale_price)
+            / $this->price) * 100
+        );
     }
 
     /*
     |--------------------------------------------------------------------------
-    | SCOPES
+    | Scopes
     |--------------------------------------------------------------------------
     */
 
-    public function scopeActive($query)
+    public function scopeActive(Builder $query): Builder
     {
-        return $query->where('is_active', true)
-            ->where('status', 'published');
+        return $query->where('is_active', true);
     }
 
-    public function scopeFeatured($query)
+    public function scopeFeatured(Builder $query): Builder
     {
         return $query->where('is_featured', true);
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Helpers
+    |--------------------------------------------------------------------------
+    */
+
+    public function inStock(): bool
+    {
+        return $this->stock_quantity > 0;
     }
 }

@@ -16,11 +16,6 @@ return new class extends Migration
                 ->constrained('categories')
                 ->nullOnDelete();
 
-            $table->foreignId('destination_id')
-                ->nullable()
-                ->constrained('destinations')
-                ->nullOnDelete();
-
             $table->foreignId('author_id')
                 ->nullable()
                 ->constrained('users')
@@ -63,7 +58,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->index('category_id');
-            $table->index('destination_id');
             $table->index('author_id');
             $table->index('type');
             $table->index('is_featured');
