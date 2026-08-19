@@ -29,6 +29,8 @@ class SliderController extends Controller
 
     public function store(Request $request)
     {
+
+        
         $request->validate([
             'position' => 'required|string|max:255',
             'image_id' => 'nullable|exists:media,id',

@@ -14,39 +14,15 @@ class PageSection extends Model
     */
 
     protected $fillable = [
-        /*
-        |--------------------------------------------------------------------------
-        | Relations
-        |--------------------------------------------------------------------------
-        */
-
         'page_id',
 
-        /*
-        |--------------------------------------------------------------------------
-        | Identification
-        |--------------------------------------------------------------------------
-        */
+        'key',
 
-        'section_key',
+        'type',
 
-        'section_type',
+        'layout',
 
-        /*
-        |--------------------------------------------------------------------------
-        | Media
-        |--------------------------------------------------------------------------
-        */
-
-        'thumbnail_id',
-
-        'background_image_id',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Display
-        |--------------------------------------------------------------------------
-        */
+        'image_id',
 
         'sort_order',
 
@@ -64,6 +40,34 @@ class PageSection extends Model
 
         'is_active' => 'boolean',
     ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Page
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * Trang chứa section.
+     */
+    public function page()
+    {
+        return $this->belongsTo(Page::class);
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Media
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * Ảnh của section.
+     */
+    public function image()
+    {
+        return $this->belongsTo(Media::class, 'image_id');
+    }
 
     /*
     |--------------------------------------------------------------------------
@@ -108,45 +112,6 @@ class PageSection extends Model
 
     /*
     |--------------------------------------------------------------------------
-    | Page
-    |--------------------------------------------------------------------------
-    */
-
-    /**
-     * Trang chứa section.
-     */
-    public function page()
-    {
-        return $this->belongsTo(Page::class);
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Media
-    |--------------------------------------------------------------------------
-    */
-
-    /**
-     * Ảnh đại diện.
-     */
-    public function thumbnail()
-    {
-        return $this->belongsTo(Media::class, 'thumbnail_id');
-    }
-
-    /**
-     * Ảnh nền.
-     */
-    public function backgroundImage()
-    {
-        return $this->belongsTo(
-            Media::class,
-            'background_image_id'
-        );
-    }
-
-    /*
-    |--------------------------------------------------------------------------
     | Accessors
     |--------------------------------------------------------------------------
     */
@@ -161,12 +126,49 @@ class PageSection extends Model
     }
 
     /**
+     * Tiêu đề phụ.
+     */
+    public function getSubtitleAttribute()
+    {
+        return optional($this->translation)->subtitle
+            ?? optional($this->vi)->subtitle;
+    }
+
+    /**
      * Nội dung section.
      */
     public function getContentAttribute()
     {
         return optional($this->translation)->content
             ?? optional($this->vi)->content;
+    }
+
+    /**
+     * Text của button.
+     */
+    public function getButtonTextAttribute()
+    {
+        return optional($this->translation)->button_text
+            ?? optional($this->vi)->button_text;
+    }
+
+    /**
+     * Link của button.
+     */
+    public function getButtonLinkAttribute()
+    {
+        return optional($this->translation)->button_link
+            ?? optional($this->vi)->button_link;
+    }
+
+    /**
+     * Dữ liệu mở rộng dạng JSON.
+     */
+    public function getDataJsonAttribute()
+    {
+        return optional($this->translation)->data_json
+            ?? optional($this->vi)->data_json
+            ?? [];
     }
 
     /*
@@ -183,6 +185,20 @@ class PageSection extends Model
         return $query->where('is_active', true);
     }
 
+    /**
+     * Lấy section theo key.
+     *
+     * Ví dụ:
+     *
+     * PageSection::key('about')->first();
+     */
+    public function scopeKey(
+        Builder $query,
+        string $key
+    ): Builder {
+        return $query->where('key', $key);
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Helpers
@@ -190,7 +206,7 @@ class PageSection extends Model
     */
 
     /**
-     * Kiểm tra section có đang hoạt động không.
+     * Kiểm tra section có đang hoạt động hay không.
      */
     public function isActive(): bool
     {

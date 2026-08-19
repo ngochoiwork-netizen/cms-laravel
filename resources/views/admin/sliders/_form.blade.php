@@ -8,12 +8,10 @@
 
     $positions = [
         'home' => 'Trang chủ',
-        'destination' => 'Điểm đến',
-        'hotel' => 'Khách sạn',
-        'restaurant' => 'Nhà hàng',
-        'tour' => 'Tour',
-        'blog' => 'Blog',
-        'about' => 'Giới thiệu',
+        'pos-system' => 'POS System',
+        'merchant-services' => 'Merchant Services',
+        'growth-services' => 'Growth Services',
+        'about' => 'About Us',
         'landing' => 'Landing Page',
     ];
 @endphp

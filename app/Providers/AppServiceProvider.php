@@ -21,10 +21,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        
         View::composer('frontend.*', function ($view) {
-
+            if (session()->has('locale')) {
+                app()->setLocale(session('locale'));
+            }
             $locale = app()->getLocale();
-
             $headerCategories = Category::with([
                 'translations' => function ($query) use ($locale) {
                     $query->where('locale', $locale);

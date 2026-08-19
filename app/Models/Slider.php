@@ -14,29 +14,11 @@ class Slider extends Model
     */
 
     protected $fillable = [
-        /*
-        |--------------------------------------------------------------------------
-        | Media
-        |--------------------------------------------------------------------------
-        */
-
         'image_id',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Link
-        |--------------------------------------------------------------------------
-        */
 
         'link',
 
-        'link_target',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Display
-        |--------------------------------------------------------------------------
-        */
+        'button_text',
 
         'position',
 
@@ -105,7 +87,7 @@ class Slider extends Model
     */
 
     /**
-     * Ảnh của slider.
+     * Ảnh slider.
      */
     public function image()
     {
@@ -119,7 +101,7 @@ class Slider extends Model
     */
 
     /**
-     * Tiêu đề.
+     * Tiêu đề theo ngôn ngữ hiện tại.
      */
     public function getTitleAttribute()
     {
@@ -128,7 +110,7 @@ class Slider extends Model
     }
 
     /**
-     * Phụ đề.
+     * Tiêu đề phụ theo ngôn ngữ hiện tại.
      */
     public function getSubtitleAttribute()
     {
@@ -137,21 +119,12 @@ class Slider extends Model
     }
 
     /**
-     * Mô tả.
+     * Mô tả theo ngôn ngữ hiện tại.
      */
     public function getDescriptionAttribute()
     {
         return optional($this->translation)->description
             ?? optional($this->vi)->description;
-    }
-
-    /**
-     * Nội dung nút bấm.
-     */
-    public function getButtonTextAttribute()
-    {
-        return optional($this->translation)->button_text
-            ?? optional($this->vi)->button_text;
     }
 
     /*
@@ -161,7 +134,7 @@ class Slider extends Model
     */
 
     /**
-     * Slider đang hoạt động.
+     * Chỉ lấy slider đang hoạt động.
      */
     public function scopeActive(Builder $query): Builder
     {
@@ -169,11 +142,7 @@ class Slider extends Model
     }
 
     /**
-     * Slider theo vị trí.
-     *
-     * Ví dụ:
-     *
-     * Slider::position('home')->get();
+     * Lấy slider theo vị trí.
      */
     public function scopePosition(
         Builder $query,
@@ -189,7 +158,7 @@ class Slider extends Model
     */
 
     /**
-     * Kiểm tra slider có đang hoạt động không.
+     * Kiểm tra slider có đang hoạt động hay không.
      */
     public function isActive(): bool
     {

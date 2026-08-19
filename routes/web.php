@@ -81,7 +81,6 @@ Route::prefix('admin')
         Route::delete('categories/{category}', [CategoryController::class, 'destroy'])
             ->name('categories.destroy');
 
-
         // Post
         Route::get('posts', [PostController::class, 'post'])
             ->name('posts.index');
@@ -132,11 +131,9 @@ Route::prefix('admin')
         Route::delete('user/{user}', [UserController::class, 'destroy'])
             ->name('users.destroy');
 
-
         // Khóa / mở user
         Route::patch('user/{user}/toggle-active', [UserController::class, 'toggleActive'])
             ->name('users.toggle-active');
-
 
         // Reset password
         Route::get('user/{user}/reset-password', [UserController::class, 'showResetPassword'])
@@ -144,7 +141,6 @@ Route::prefix('admin')
 
         Route::put('user/{user}/reset-password', [UserController::class, 'resetPassword'])
             ->name('users.update-password');
-
 
 
         // Page
@@ -166,7 +162,6 @@ Route::prefix('admin')
         Route::delete('pages/{page}', [PageController::class, 'destroy'])
             ->name('pages.destroy');
 
-
         // Page Sections
         Route::get('pages/{page}/sections', [PageSectionController::class, 'index'])
             ->name('pages.sections.index');
@@ -185,9 +180,6 @@ Route::prefix('admin')
 
         Route::delete('page-sections/{section}', [PageSectionController::class, 'destroy'])
             ->name('page-sections.destroy');
-
-
-
     });
 
     Route::get('/language/{locale}', [LanguageController::class, 'switch'])
@@ -199,10 +191,8 @@ Route::prefix('admin')
     Route::get('/lien-he', [HomeController::class, 'contact'])
         ->name('frontend.contact');
 
-        
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])
         ->name('frontend.sitemap');
-
 
     Route::get('/{categorySlug}/{postSlug}', [HomeController::class, 'detail'])
         ->name('frontend.post.show');

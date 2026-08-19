@@ -9,25 +9,33 @@
 @section('content')
 
     {{-- Banner --}}
+    @include('frontend.home.sections.slider')
+
 
     {{-- About --}}
+    @include('frontend.home.sections.about')
+
 
     {{-- Services --}}
+    @include('frontend.home.sections.service')
 
     {{-- Features --}}
+    @include('frontend.home.sections.solution')
 
     {{-- Products --}}
+    @include('frontend.home.sections.workflow')
 
     {{-- Awards --}}
+    @include('frontend.home.sections.whysenverse')
 
     {{-- Case Study --}}
 
     {{-- Testimonials --}}
-
+    @include('frontend.home.sections.testimonials')
     {{-- FAQ --}}
 
     {{-- Blog --}}
-
+    @include('frontend.home.sections.posts')
     {{-- CTA --}}
 
 @endsection
