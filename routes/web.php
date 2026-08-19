@@ -11,14 +11,9 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PageSectionController;
-use App\Http\Controllers\Admin\CountryController;
-use App\Http\Controllers\Admin\ProvinceController;
-use App\Http\Controllers\Admin\DestinationController;
-use App\Http\Controllers\Admin\HotelController;
-use App\Http\Controllers\Admin\RestaurantController;
-use App\Http\Controllers\Admin\AttractionController;
 use App\Http\Controllers\Frontend\SitemapController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\LanguageController;
 
 require __DIR__.'/auth.php';
 
@@ -191,142 +186,28 @@ Route::prefix('admin')
         Route::delete('page-sections/{section}', [PageSectionController::class, 'destroy'])
             ->name('page-sections.destroy');
 
-        // Country
-        Route::get('countries', [CountryController::class, 'countries'])
-            ->name('countries.index');
-
-        Route::get('countries/create', [CountryController::class, 'create'])
-            ->name('countries.create');
-
-        Route::post('countries', [CountryController::class, 'store'])
-            ->name('countries.store');
-
-        Route::get('countries/{country}/edit', [CountryController::class, 'edit'])
-            ->name('countries.edit');
-
-        Route::put('countries/{country}', [CountryController::class, 'update'])
-            ->name('countries.update');
-
-        Route::delete('countries/{country}', [CountryController::class, 'destroy'])
-            ->name('countries.destroy');
-
-
-        // Province
-        Route::get('provinces', [ProvinceController::class, 'index'])
-            ->name('provinces.index');
-
-        Route::get('provinces/create', [ProvinceController::class, 'create'])
-            ->name('provinces.create');
-
-        Route::post('provinces', [ProvinceController::class, 'store'])
-            ->name('provinces.store');
-
-        Route::get('provinces/{province}/edit', [ProvinceController::class, 'edit'])
-            ->name('provinces.edit');
-
-        Route::put('provinces/{province}', [ProvinceController::class, 'update'])
-            ->name('provinces.update');
-
-        Route::delete('provinces/{province}', [ProvinceController::class, 'destroy'])
-            ->name('provinces.destroy');
-
-
-        // Destinations
-        Route::get('destinations', [DestinationController::class, 'index'])
-            ->name('destinations.index');
-
-        Route::get('destinations/create', [DestinationController::class, 'create'])
-            ->name('destinations.create');
-
-        Route::post('destinations', [DestinationController::class, 'store'])
-            ->name('destinations.store');
-
-        Route::get('destinations/{destination}/edit', [DestinationController::class, 'edit'])
-            ->name('destinations.edit');
-
-        Route::put('destinations/{destination}', [DestinationController::class, 'update'])
-            ->name('destinations.update');
-
-        Route::delete('destinations/{destination}', [DestinationController::class, 'destroy'])
-            ->name('destinations.destroy');
-
-        // Hotels
-        Route::get('hotels', [HotelController::class, 'index'])
-            ->name('hotels.index');
-
-        Route::get('hotels/create', [HotelController::class, 'create'])
-            ->name('hotels.create');
-
-        Route::post('hotels', [HotelController::class, 'store'])
-            ->name('hotels.store');
-
-        Route::get('hotels/{hotel}/edit', [HotelController::class, 'edit'])
-            ->name('hotels.edit');
-
-        Route::put('hotels/{hotel}', [HotelController::class, 'update'])
-            ->name('hotels.update');
-
-        Route::delete('hotels/{hotel}', [HotelController::class, 'destroy'])
-            ->name('hotels.destroy');
-
-
-        // Restaurants
-        Route::get('restaurants', [RestaurantController::class, 'index'])
-            ->name('restaurants.index');
-
-        Route::get('restaurants/create', [RestaurantController::class, 'create'])
-            ->name('restaurants.create');
-
-        Route::post('restaurants', [RestaurantController::class, 'store'])
-            ->name('restaurants.store');
-
-        Route::get('restaurants/{restaurant}/edit', [RestaurantController::class, 'edit'])
-            ->name('restaurants.edit');
-
-        Route::put('restaurants/{restaurant}', [RestaurantController::class, 'update'])
-            ->name('restaurants.update');
-
-        Route::delete('restaurants/{restaurant}', [RestaurantController::class, 'destroy'])
-            ->name('restaurants.destroy');
-
-        // Attractions
-        Route::get('attractions', [AttractionController::class, 'index'])
-            ->name('attractions.index');
-
-        Route::get('attractions/create', [AttractionController::class, 'create'])
-            ->name('attractions.create');
-
-        Route::post('attractions', [AttractionController::class, 'store'])
-            ->name('attractions.store');
-
-        Route::get('attractions/{attraction}/edit', [AttractionController::class, 'edit'])
-            ->name('attractions.edit');
-
-        Route::put('attractions/{attraction}', [AttractionController::class, 'update'])
-            ->name('attractions.update');
-
-        Route::delete('attractions/{attraction}', [AttractionController::class, 'destroy'])
-            ->name('attractions.destroy');
 
 
     });
 
+    Route::get('/language/{locale}', [LanguageController::class, 'switch'])
+        ->name('frontend.language.switch');
+
+    Route::get('/', [HomeController::class, 'index'])
+        ->name('home');
+
+    Route::get('/lien-he', [HomeController::class, 'contact'])
+        ->name('frontend.contact');
+
+        
+    Route::get('/sitemap.xml', [SitemapController::class, 'index'])
+        ->name('frontend.sitemap');
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/{categorySlug}/{postSlug}', [HomeController::class, 'detail'])
+        ->name('frontend.post.show');
 
-Route::get('/lien-he', [HomeController::class, 'contact'])
-    ->name('frontend.contact');
-
-    
-Route::get('/sitemap.xml', [SitemapController::class, 'index'])
-    ->name('frontend.sitemap');
-
-
-Route::get('/{categorySlug}/{postSlug}', [HomeController::class, 'detail'])
-    ->name('frontend.post.show');
-
-Route::get('/{slug}', [HomeController::class, 'resolveOneLevel'])
-    ->name('frontend.resolve');
+    Route::get('/{slug}', [HomeController::class, 'resolveOneLevel'])
+        ->name('frontend.resolve');
 
 

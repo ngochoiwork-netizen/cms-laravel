@@ -23,14 +23,32 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('frontend.*', function ($view) {
 
-            $headerCategories = Category::with('children')
+            $locale = app()->getLocale();
+
+            $headerCategories = Category::with([
+                'translations' => function ($query) use ($locale) {
+                    $query->where('locale', $locale);
+                },
+                'children' => function ($query) use ($locale) {
+                    $query->where('is_active', 1)
+                        ->orderBy('sort_order')
+                        ->orderBy('id')
+                        ->with([
+                            'translations' => function ($query) use ($locale) {
+                                $query->where('locale', $locale);
+                            }
+                        ]);
+                }
+            ])
                 ->whereNull('parent_id')
                 ->where('type', 'post')
                 ->where('is_active', 1)
                 ->whereIn('slug', [
-                    'dich-vu',
-                    'giai-phap',
-                    'tin-tuc',
+                    'pos-system',
+                    'merchant-services',
+                    'growth-services',
+                    'resource',
+                    've-chung-toi',
                 ])
                 ->orderBy('sort_order')
                 ->orderBy('id')
