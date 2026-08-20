@@ -14,7 +14,7 @@ use App\Http\Controllers\Admin\PageSectionController;
 use App\Http\Controllers\Frontend\SitemapController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\LanguageController;
-
+use App\Http\Controllers\Frontend\SolutionController;
 require __DIR__.'/auth.php';
 
 /*
@@ -188,16 +188,9 @@ Route::prefix('admin')
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
 
-    Route::get('/lien-he', [HomeController::class, 'contact'])
-        ->name('frontend.contact');
+    Route::get('/solutions/{slug}',[SolutionController::class, 'show'])
+        ->name('solutions.show');
 
+    
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])
         ->name('frontend.sitemap');
-
-    Route::get('/{categorySlug}/{postSlug}', [HomeController::class, 'detail'])
-        ->name('frontend.post.show');
-
-    Route::get('/{slug}', [HomeController::class, 'resolveOneLevel'])
-        ->name('frontend.resolve');
-
-
