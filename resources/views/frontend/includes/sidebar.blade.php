@@ -1,4 +1,4 @@
--<div id="side-bar" class="side-bar header-two">
+<div id="side-bar" class="side-bar header-two">
         <div class="rts-sidebar-menu-desktop">
             <div class="logo-area">
                 <a class="logo" href="index-four.html"><img src="assets/images/logo/04.svg" alt=""></a>

@@ -73,7 +73,7 @@ class HomeController extends Controller
         $this->view['whySection'] = $whySection;
 
         $testimonials = Post::with([
-            'translation',
+            'translations',
             'thumbnail',
         ])
             ->whereHas('category', function ($query) {
@@ -88,7 +88,7 @@ class HomeController extends Controller
 
 
         $posts = Post::with([
-            'translation',
+            'translations',
             'thumbnail',
             'category',
         ])
@@ -102,6 +102,25 @@ class HomeController extends Controller
 
         $this->view['posts'] = $posts;
 
+        $faqs = Post::with([
+            'translations',
+            'category',
+        ])
+        ->active()
+        ->whereHas('category', function ($query) {
+            $query->where('slug', 'faq');
+        })
+        ->orderBy('sort_order')
+        ->take(5)
+        ->get();
+
+        $this->view['faqs'] = $faqs;
+
+        $ctaSection = $home?->sections
+        ->where('key', 'cta')
+        ->where('is_active', true)
+        ->first();
+        $this->view['ctaSection'] = $ctaSection;
 
         return view('frontend.home.index',$this->view);
     }

@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Category;
+use App\Models\Page;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -56,7 +57,37 @@ class AppServiceProvider extends ServiceProvider
                 ->orderBy('id')
                 ->get();
 
-            $view->with('headerCategories', $headerCategories);
+
+            $footerPage = Page::with([
+                'sections.translations',
+                'sections.image',
+            ])
+                ->active()
+                ->where('slug', 'footer')
+                ->first();
+
+            $footerCompany = $footerPage?->sections
+                ->where('key', 'footer_company')
+                ->where('is_active', true)
+                ->first();
+
+            $footerService = $footerPage?->sections
+                ->where('key', 'footer_service')
+                ->where('is_active', true)
+                ->first();
+
+            $footerPolicy = $footerPage?->sections
+                ->where('key', 'footer_policy')
+                ->where('is_active', true)
+                ->first();
+                
+            $view->with([
+                'headerCategories' => $headerCategories,
+                'footerCompany' => $footerCompany,
+                'footerService' => $footerService,
+                'footerPolicy' => $footerPolicy,
+            ]);
+
         });
     }
 }

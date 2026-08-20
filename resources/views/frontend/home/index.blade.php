@@ -11,10 +11,8 @@
     {{-- Banner --}}
     @include('frontend.home.sections.slider')
 
-
     {{-- About --}}
     @include('frontend.home.sections.about')
-
 
     {{-- Services --}}
     @include('frontend.home.sections.service')
@@ -32,10 +30,13 @@
 
     {{-- Testimonials --}}
     @include('frontend.home.sections.testimonials')
+
     {{-- FAQ --}}
+    @include('frontend.home.sections.faq')
 
     {{-- Blog --}}
     @include('frontend.home.sections.posts')
-    {{-- CTA --}}
 
+    {{-- CTA --}}
+    @include('frontend.home.sections.cta')
 @endsection
