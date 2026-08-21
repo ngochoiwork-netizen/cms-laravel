@@ -128,7 +128,6 @@ class SolutionController extends Controller
         //dd($testimonials);
         $this->view['testimonials'] = $testimonials;
 
-
         $faqs = Post::with([
             'translations',
             'category',
@@ -149,7 +148,6 @@ class SolutionController extends Controller
         ->first();
         $this->view['ctaSection'] = $ctaSection;
 
-
         return view('frontend.solutions.pos-system.index',$this->view);
     }
 
@@ -159,11 +157,87 @@ class SolutionController extends Controller
     private function merchantServices()
     {
         // Load dữ liệu riêng của Merchant Services tại đây
+        $slider = Slider::with([
+            'image',
+            'translations',
+        ])
+            ->active()
+            ->position('merchant-services')
+            ->orderBy('sort_order')
+            ->orderBy('id')
+            ->first();
+        $this->view['slider'] = $slider;
+        
 
-        return view(
-            'frontend.solutions.merchant-services.index',
-            $this->view
-        );
+        $page = Page::with([
+            'sections.translations',
+            'sections.image',
+        ])
+            ->active()
+            ->where('slug', 'merchant-services')
+            ->first();
+
+        $this->view['page'] = $page;
+
+        $benefitSection = $page?->sections
+            ->where('key', 'benefits')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['benefitSection'] = $benefitSection;
+
+
+        $paymentMethodSection = $page?->sections
+            ->where('key', 'payment_methods')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['paymentMethodSection'] = $paymentMethodSection;
+
+        $posIntegrationSection = $page?->sections
+            ->where('key', 'workflow')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['posIntegrationSection'] = $posIntegrationSection;
+
+        $paymentManagementSection = $page?->sections
+            ->where('key', 'payment_manament')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['paymentManagementSection'] = $paymentManagementSection;
+
+
+        $faqSection = $page?->sections
+            ->where('key', 'faq')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['faqSection'] = $faqSection;
+
+        $testimonials = Post::with([
+            'translations',
+            'thumbnail',
+        ])
+            ->whereHas('category', function ($query) {
+                $query->where('slug', 'khach-hang');
+            })
+            ->orderBy('sort_order')
+            ->orderByDesc('id')
+            ->take(5)
+            ->get();
+        //dd($testimonials);
+        $this->view['testimonials'] = $testimonials;
+
+        $ctaSection = $page?->sections
+            ->where('key', 'cta')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['ctaSection'] = $ctaSection;
+
+        return view('frontend.solutions.merchant-services.index',$this->view);
     }
 
     /**

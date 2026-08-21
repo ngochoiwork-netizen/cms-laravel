@@ -10,7 +10,10 @@
         'home' => 'Trang chủ',
         'pos-system' => 'POS System',
         'merchant-services' => 'Merchant Services',
-        'growth-services' => 'Growth Services',
+        'website-design' => 'Website Design',
+        'social-media' => 'Social Media',
+        'local-boost' => 'Local Boost',
+        'al-reception' => 'Al Reception',
         'about' => 'About Us',
         'landing' => 'Landing Page',
     ];
