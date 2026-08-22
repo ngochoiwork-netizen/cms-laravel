@@ -51,7 +51,7 @@ class AppServiceProvider extends ServiceProvider
                     'merchant-services',
                     'growth-services',
                     'resource',
-                    've-chung-toi',
+                    'about-us',
                 ])
                 ->orderBy('sort_order')
                 ->orderBy('id')

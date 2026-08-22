@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\SolutionController;
 use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\ContactController;
 require __DIR__.'/auth.php';
 
 /*
@@ -176,15 +177,24 @@ Route::prefix('admin')
     Route::get('/language/{locale}', [LanguageController::class, 'switch'])
         ->name('frontend.language.switch');
 
+
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
-    
-    Route::get('/about', [AboutController::class, 'index'])
+
+
+    Route::get('/about-us', [AboutController::class, 'index'])
     ->name('about');
+
+
+    Route::get('/contact', [ContactController::class, 'index'])
+    ->name('contact');
+
+    Route::post('/contact', [ContactController::class, 'submit'])
+    ->name('contact.submit');
+
 
     Route::get('/solutions/{slug}',[SolutionController::class, 'show'])
         ->name('solutions.show');
 
-    
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])
         ->name('frontend.sitemap');
