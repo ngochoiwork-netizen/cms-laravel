@@ -17,6 +17,7 @@ use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\SolutionController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\BlogController;
 require __DIR__.'/auth.php';
 
 /*
@@ -198,3 +199,10 @@ Route::prefix('admin')
 
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])
         ->name('frontend.sitemap');
+
+
+    Route::get('/resources/{categorySlug}', [BlogController::class, 'index'])
+    ->name('resources.category');
+
+    Route::get('/resources/{categorySlug}/{postSlug}', [BlogController::class, 'show'])
+        ->name('resources.show');
