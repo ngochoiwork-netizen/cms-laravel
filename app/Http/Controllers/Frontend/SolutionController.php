@@ -28,8 +28,12 @@ class SolutionController extends Controller
             case 'merchant-services':
                 return $this->merchantServices();
 
-            case 'growth-services':
-                return $this->growthServices();
+            case 'social-media':
+            case 'website-design':
+            case 'local-boost':
+            case 'the-qua-tang':
+            case 'ai-resiption':
+                return $this->growthServices($slug);
 
             default:
                 abort(404);
@@ -106,6 +110,13 @@ class SolutionController extends Controller
 
         $this->view['featureSection'] = $featureSection;
 
+        $pricingSection = $page?->sections
+            ->where('key', 'pricing')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['pricingSection'] = $pricingSection;
+
         $home = Page::with([
             'sections.translations',
             'sections.image',
@@ -168,7 +179,6 @@ class SolutionController extends Controller
             ->first();
         $this->view['slider'] = $slider;
         
-
         $page = Page::with([
             'sections.translations',
             'sections.image',
@@ -185,7 +195,6 @@ class SolutionController extends Controller
             ->first();
 
         $this->view['benefitSection'] = $benefitSection;
-
 
         $paymentMethodSection = $page?->sections
             ->where('key', 'payment_methods')
@@ -207,7 +216,6 @@ class SolutionController extends Controller
             ->first();
 
         $this->view['paymentManagementSection'] = $paymentManagementSection;
-
 
         $faqSection = $page?->sections
             ->where('key', 'faq')
@@ -239,17 +247,90 @@ class SolutionController extends Controller
 
         return view('frontend.solutions.merchant-services.index',$this->view);
     }
-
     /**
      * Growth Services
      */
-    private function growthServices()
+    private function growthServices(string $slug)
     {
         // Load dữ liệu riêng của Growth Services tại đây
+        $sliders = Slider::with([
+            'image',
+            'translations',
+        ])
+        ->active()
+        ->position($slug)
+        ->orderBy('sort_order')
+        ->orderBy('id')
+        ->get();
+        $this->view['sliders'] = $sliders;
 
-        return view(
-            'frontend.solutions.growth-services.index',
-            $this->view
-        );
+        $page = Page::with([
+            'sections.translations',
+            'sections.image',
+        ])
+            ->active()
+            ->where('slug', $slug)
+            ->first();
+
+        $this->view['page'] = $page;
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Benefits
+        |--------------------------------------------------------------------------
+        */
+
+        $benefitSection = $page?->sections
+            ->where('key', 'benefits')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['benefitSection'] = $benefitSection;
+
+        $serviceSection = $page?->sections
+            ->where('key', 'services')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['serviceSection'] = $serviceSection;
+
+        $workflowSection = $page?->sections
+            ->where('key', 'workflow')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['workflowSection'] = $workflowSection;
+
+        $whySection = $page?->sections
+            ->where('key', 'why_senverse')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['whySection'] = $whySection;
+
+        $pricingSection = $page?->sections
+            ->where('key', 'pricing')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['pricingSection'] = $pricingSection;
+
+        $faqSection = $page?->sections
+            ->where('key', 'faq')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['faqSection'] = $faqSection;
+
+        $ctaSection = $page?->sections
+            ->where('key', 'cta')
+            ->where('is_active', true)
+            ->first();
+
+        $this->view['ctaSection'] = $ctaSection;
+        
+        return view('frontend.solutions.growth-services.index',$this->view);
     }
+
 }

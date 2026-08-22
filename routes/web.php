@@ -15,6 +15,7 @@ use App\Http\Controllers\Frontend\SitemapController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\SolutionController;
+use App\Http\Controllers\Frontend\AboutController;
 require __DIR__.'/auth.php';
 
 /*
@@ -177,6 +178,9 @@ Route::prefix('admin')
 
     Route::get('/', [HomeController::class, 'index'])
         ->name('home');
+    
+    Route::get('/about', [AboutController::class, 'index'])
+    ->name('about');
 
     Route::get('/solutions/{slug}',[SolutionController::class, 'show'])
         ->name('solutions.show');
