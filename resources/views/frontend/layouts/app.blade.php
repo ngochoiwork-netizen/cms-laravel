@@ -39,6 +39,9 @@
         href="{{ asset('assets/frontend/css/style.css') }}"
         as="style">
 
+    <link rel="stylesheet"
+        href="{{ asset('assets/frontend/css/senverse-theme.css') }}">
+
 </head>
 
 <body class="demo-software-company">

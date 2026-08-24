@@ -1,0 +1,3978 @@
+/*
+|--------------------------------------------------------------------------
+| Senverse Brand Theme
+|--------------------------------------------------------------------------
+*/
+
+:root {
+    /* Brand */
+    --color-primary: #1b365d !important;;
+    --color-secondary: #0d1b2e;
+    --color-blue: #6689cc;
+
+    /* Senverse custom palette */
+    --senverse-primary: #1b365d;
+    --senverse-dark: #0d1b2e;
+    --senverse-medium: #294f7d;
+    --senverse-light: #6689cc;
+    --senverse-border: #dbe7f5;
+    --senverse-bg-light: #f7f9fc;
+
+    /* UI */
+    --color-body: #667085;
+    --color-heading-1: #101828;
+    --color-heading-2: #1d2939;
+    --color-title: #101828;
+
+    --color-border: #e4eaf2;
+    --senverse-bg-light: #f7f9fc;
+
+    --color-info: #6689cc;
+}
+
+
+body.demo-software-company {
+    --color-primary: var(--senverse-primary);
+    --color-secondary: var(--senverse-dark);
+    --color-blue: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Home - About
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Main Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-content-style-four
+.title-left-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-content-style-four
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Counter
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.counter-area
+h3.title {
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-about-area.area-4
+.counter-area
+.done {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Feature List
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.left-logo-content
+ul li a {
+    color: var(--senverse-primary);
+    transition: color .3s ease;
+}
+
+body.demo-software-company
+.rts-about-area.area-4
+.left-logo-content
+ul li a:hover {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| About Button
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn {
+    color: var(--senverse-primary);
+}
+
+
+/* Round button */
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn
+.round-btn {
+    border-color: var(--senverse-primary);
+    background: transparent;
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* Arrow icon */
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn
+.round-btn i {
+    color: var(--senverse-primary);
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| About Button Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn:hover {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn:hover
+.round-btn {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-about-area.area-4
+.about-btn:hover
+.round-btn i {
+    color: #ffffff;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home - Technology & Services
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Pre Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.pre-title {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| All Services Button
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.title-area-between
+.right-area a {
+    color: var(--senverse-primary);
+    border-color: var(--senverse-border);
+    transition: all .3s ease;
+}
+
+body.demo-software-company
+.rts-service-area-four
+.title-area-between
+.right-area a i {
+    color: var(--senverse-primary) ;
+    transition: color .3s ease;
+}
+
+body.demo-software-company
+.rts-service-area-four
+.title-area-between
+.right-area a:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #fff;
+}
+
+body.demo-software-company
+.rts-service-area-four
+.title-area-between
+.right-area a:hover i {
+    color: #fff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Service Card - Normal State
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four {
+    background: #fff;
+    border-color: var(--senverse-border);
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Main Service Icon - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four
+.icon > i {
+    color: var(--senverse-primary)  !important;
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Round Arrow Button - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four
+.round-btn {
+    background: transparent;
+    border-color: var(--senverse-primary);
+    color: var(--senverse-primary);
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+
+/* Arrow icon */
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four
+.round-btn i {
+    color: var(--senverse-primary);
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Service Title - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four
+.title a {
+    color: #101828;
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Card Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, 0.15);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Main Icon - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover
+.icon > i {
+    color: #fff  !important;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Title - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover
+.title a {
+    color: #fff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Round Arrow Button - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover
+.round-btn {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Arrow Icon - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover
+.round-btn i {
+    color: #fff;
+}
+
+/* Section title: Technology & Services */
+body.demo-software-company
+.rts-service-area-four
+.title-area-between
+.title-left-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/* Service card title */
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four
+h5.title a {
+    color: var(--senverse-primary);
+    transition: color .3s ease;
+}
+
+
+/* Service card title khi hover */
+body.demo-software-company
+.rts-service-area-four
+.single-service-style-four:hover
+h5.title a {
+    color: #ffffff;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home - Our Solutions
+|--------------------------------------------------------------------------
+*/
+
+/* Section background */
+body.demo-software-company .rts-product-area.bg_dark {
+    background: var(--senverse-dark);
+}
+
+/* Card 1 */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.inner.one {
+    background: #102742;
+}
+
+
+/* Card 2 */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.inner.two {
+    background: #163250;
+}
+
+
+/* Card 3 */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.inner.three {
+    background: #1b365d;
+}
+
+
+
+
+
+/* Section pre-title */
+body.demo-software-company
+.rts-product-area
+.title-center-wrapper
+.pre-title {
+    color: var(--senverse-light);
+}
+
+
+/* Section title */
+body.demo-software-company
+.rts-product-area
+.title-center-wrapper
+h2.title {
+    color: #ffffff;
+}
+
+
+/* Product card */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.inner {
+    background: #17345a;
+    border: 1px solid rgba(102, 137, 204, 0.18);
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Card hover */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.inner:hover {
+    background: var(--senverse-primary);
+    border-color: rgba(102, 137, 204, 0.45);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Product Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.left-content
+h3.title {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.left-content
+.disc {
+    color: #d7e0ea;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature List
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.feature-list li {
+    color: #ffffff;
+}
+
+
+/* Check icon */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.feature-list li i {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Tags
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.tags li {
+    background: transparent;
+    border: 1px solid rgba(102, 137, 204, 0.65);
+    color: #ffffff;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+
+/* Tag hover */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.tags li:hover {
+    background: var(--senverse-light);
+    border-color: var(--senverse-light);
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Learn More Button
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.rts-btn.btn-primary {
+    background: var(--senverse-light);
+    border-color: var(--senverse-light);
+    color: #ffffff;
+}
+
+
+/* Button icon */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.rts-btn.btn-primary i {
+    color: #ffffff;
+}
+
+
+/* Button hover */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.rts-btn.btn-primary:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--senverse-primary);
+}
+
+
+/* Button icon hover */
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.rts-btn.btn-primary:hover i {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Product Image
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-product-area
+.product-wrapper
+.image-area img {
+    border-radius: 8px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home - How It Works
+|--------------------------------------------------------------------------
+*/
+
+/* Section title label */
+body.demo-software-company
+.rts-working-process-area
+.title-center-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+/* Main section title */
+body.demo-software-company
+.rts-working-process-area
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+/* Step title */
+body.demo-software-company
+.rts-working-process-area
+.working-process-wrapper-three
+h5.title {
+    color: var(--senverse-primary);
+}
+
+/* Step description */
+body.demo-software-company
+.rts-working-process-area
+.working-process-wrapper-three
+p.disc {
+    color: #667085;
+}
+
+body.demo-software-company .working-process-three-main .working-process-wrapper-three::before {
+    left: 46%;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home - Why Choose Senverse
+|--------------------------------------------------------------------------
+*/
+
+/* Section background */
+body.demo-software-company
+.our-vission.area-4.bg_dark {
+    background: var(--senverse-dark);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Left Main Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.our-vision-left-content
+.title-left-wrapper
+h2.title {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Right Content Wrapper
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.our-vision-right-content {
+    border-color: rgba(102, 137, 204, .22);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Right Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.our-vision-right-content
+.content-area
+.title-left-wrapper
+h3.title {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.our-vision-right-content
+.content-area
+p.disc {
+    color: #b8c5d6;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature List
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.check-main-wrapper
+.single-check p {
+    color: #ffffff;
+}
+
+
+/* Check icon */
+body.demo-software-company
+.our-vission.area-4
+.check-main-wrapper
+.single-check i {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Book A Demo Button
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.our-vission.area-4
+.rts-btn.btn-primary {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #ffffff;
+}
+
+
+/* Button hover */
+body.demo-software-company
+.our-vission.area-4
+.rts-btn.btn-primary:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Home - Testimonials
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Testimonial Text
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.single-testimonails-three
+.right-content
+p.disc {
+    color: #101828;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Testimonial Name
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.single-testimonails-three
+.right-content
+.bottom
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Navigation Buttons
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-next,
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-prev {
+    border-color: var(--senverse-border);
+    color: var(--senverse-primary);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+
+/* Arrow icon */
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-next i,
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-prev i {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Navigation Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-next:hover,
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-prev:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-next:hover i,
+body.demo-software-company
+.rts-testimonials-style-three.area-4
+.swiper-button-prev:hover i {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Home - FAQ
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Accordion Item
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-item {
+    background: #ffffff;
+    border-color: var(--senverse-border);
+    transition:
+        border-color .3s ease,
+        background-color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Accordion Button
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-button {
+    color: var(--senverse-primary);
+    background: #ffffff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Active / Open Item
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-button:not(.collapsed) {
+    color: var(--senverse-primary);
+    background: var(--senverse-bg-light);
+    box-shadow: none;
+}
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+    border-color: var(--senverse-light);
+    background: var(--senverse-bg-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Accordion Body
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-body {
+    color: #667085;
+    background: var(--senverse-bg-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Plus / Minus Icon
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-button::after {
+    filter: none;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-faq-area.area-4
+.accordion-item:hover {
+    border-color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Home - Insights & Resources
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Background
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area.bg_light2 {
+    background: var(--senverse-bg-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.title-center-wrapper
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Card
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one {
+    background: #ffffff;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Card Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--senverse-border);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, 0.08);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Meta - Date / Category
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.inner-content-blog > span {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.inner-content-blog
+h5.title {
+    color: var(--senverse-primary);
+
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Title Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.inner-content-blog
+a:hover h5.title {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Learn More
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line {
+    color: var(--senverse-primary);
+}
+
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line span {
+    color: var(--senverse-primary);
+
+    transition: color .3s ease;
+}
+
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line i {
+    color: var(--senverse-primary);
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Learn More Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line:hover span,
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line:hover i {
+    color: var(--senverse-light);
+}
+
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.btn-line:hover i {
+    transform: translateX(4px);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home - CTA
+|--------------------------------------------------------------------------
+*/
+
+/* CTA background */
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three.in-primary-bg.marketing {
+    background: linear-gradient(
+        135deg,
+        var(--senverse-primary) 0%,
+        var(--senverse-medium) 65%,
+        var(--senverse-light) 100%
+    );
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CTA Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+h3.title {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CTA Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+p.disc {
+    color: #d7e0ea;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CTA Button
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.rts-btn.btn-primary.btn-white {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--senverse-primary);
+}
+
+
+/* Button icon */
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.rts-btn.btn-primary.btn-white i {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| CTA Button Hover
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.rts-btn.btn-primary.btn-white:hover {
+    background: var(--senverse-dark);
+    border-color: var(--senverse-dark);
+    color: #ffffff;
+}
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.rts-btn.btn-primary.btn-white:hover i {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Decorative Circles
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.round {
+    border-color: rgba(255, 255, 255, .10);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Decorative SVG Shapes
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-call-to-action-area
+.call-to-action-wrapper-three
+.bg-shape {
+    opacity: .12;
+}
+
+/*
+|--------------------------------------------------------------------------
+| POS System - Hero
+|--------------------------------------------------------------------------
+*/
+
+/* Main title */
+body.demo-software-company
+.banner-area-start.banner-two-h
+.left-area-banner
+h1.title {
+    color: var(--senverse-primary);
+}
+
+
+/* Description */
+body.demo-software-company
+.banner-area-start.banner-two-h
+.left-area-banner
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature checks
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.stars-main-wrapper
+.single-check p {
+    color: #344054;
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.stars-main-wrapper
+.single-check p i {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Main CTA Button
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.left-area-banner
+.rts-btn.btn-primary {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #ffffff;
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.left-area-banner
+.rts-btn.btn-primary:hover {
+    background: var(--senverse-medium);
+    border-color: var(--senverse-medium);
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Right Top - ALL-IN-ONE
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.top
+h2.title {
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.top
+.info {
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Right Bottom
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.bottom-area p {
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Round Arrow Button
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.radious-btn {
+    border-color: var(--senverse-primary);
+    color: var(--senverse-primary);
+    background: transparent;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.radious-btn i {
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.radious-btn:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.right-top-area
+.radious-btn:hover i {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Rotating Circle
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.circle-animation text {
+    fill: var(--senverse-primary);
+}
+
+body.demo-software-company
+.banner-area-start.banner-two-h
+.circle-animation i {
+    color: var(--senverse-primary);
+}
+
+/*
+|--------------------------------------------------------------------------
+| POS System - Features
+|--------------------------------------------------------------------------
+*/
+
+/* Section subtitle */
+body.demo-software-company
+.rts-feature-area-three
+.title-center-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+/* Section title */
+body.demo-software-company
+.rts-feature-area-three
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature Card - Normal
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four {
+    background: #ffffff;
+    border-color: var(--senverse-border);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Main icon */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four
+.icon > i {
+    color: var(--senverse-primary) !important;
+    transition: color .3s ease;
+}
+
+/* Feature title */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four
+.content
+h3.title {
+    color: var(--senverse-primary);
+    transition: color .3s ease;
+}
+
+/* Description */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four
+.content
+p.disc {
+    color: #667085;
+    transition: color .3s ease;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Round Arrow - Normal
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four
+.round-btn {
+    background: transparent;
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four
+.round-btn i {
+    color: var(--senverse-primary) !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Card Hover
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, 0.12);
+}
+
+
+/* Title hover */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four:hover
+.content
+h3.title {
+    color: #ffffff;
+}
+
+/* Description hover */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four:hover
+.content
+p.disc {
+    color: #d7e0ea;
+}
+
+/* Round button hover */
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four:hover
+.round-btn {
+    background: transparent;
+    border-color: #ffffff;
+}
+
+body.demo-software-company
+.rts-feature-area-three
+.single-feature-area-four:hover
+.round-btn i {
+    color: #ffffff !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Merchant Services - Benefits
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Subtitle
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.title-area-between
+.title-left-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.title-area-between
+.title-left-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Swiper Navigation
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.swiper-navigation
+.swiper-btn {
+    background: #ffffff;
+    border-color: var(--senverse-border);
+    color: var(--senverse-primary);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+body.demo-software-company
+.rts-service-area
+.swiper-navigation
+.swiper-btn i {
+    color: var(--senverse-primary);
+}
+
+
+/* Navigation hover */
+body.demo-software-company
+.rts-service-area
+.swiper-navigation
+.swiper-btn:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-service-area
+.swiper-navigation
+.swiper-btn:hover i {
+    color: #ffffff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Card - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security {
+    background: var(--senverse-bg-light);
+    border-color: var(--senverse-border);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Icon - Normal
+|----------------------------------------------------------------------
+
+Không đặt background cho .icon.
+Template đang dùng .icon như một vùng ngang nên nếu thêm
+background sẽ xuất hiện thanh trắng phía sau icon.
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security
+.icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+body.demo-software-company
+.rts-service-area
+.single-service-security
+.icon i {
+    color: var(--senverse-primary) !important;
+
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Title - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security
+h5.title {
+    color: var(--senverse-primary);
+
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Description - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security
+p.disc {
+    color: #667085;
+
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Card - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, 0.12);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Icon - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+.icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Title - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+h5.title {
+    color: #ffffff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Benefit Description - Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+p.disc {
+    color: #d7e0ea;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Merchant Services - Payment Management
+|--------------------------------------------------------------------------
+*/
+
+/* Section background */
+body.demo-software-company
+.why-chooseus-area.merchant-payment-methods.bg-light-2 {
+    background: var(--senverse-bg-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Subtitle
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.title-left-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Main Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.title-left-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.why-choose-left-content
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature Grid
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+
+    transition:
+        border-color .3s ease,
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature Icon
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason
+.icon {
+    background: #f2f6fa;
+    border-color: var(--senverse-border);
+}
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason
+.icon i {
+    color: var(--senverse-primary) !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Feature Hover
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason:hover {
+    border-color: var(--senverse-light);
+    transform: translateY(-3px);
+}
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason:hover
+.icon {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.merchant-payment-methods
+.reason-wrapper
+.single-reason:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Merchant Services - POS Integration Workflow
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Subtitle
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.title-center-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.title-center-wrapper
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Workflow Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Workflow Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Step Icon
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three
+.step-icon {
+    background: #f2f6fa;
+    border: 1px solid var(--senverse-border);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* Icon */
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three
+.step-icon i {
+    color: var(--senverse-primary) !important;
+    font-size: 20px;
+
+    transition: color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Step Icon Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three:hover
+.step-icon {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three:hover
+.step-icon i {
+    color: #ffffff !important;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Workflow Connecting Line
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-three-main::before {
+    border-color: var(--senverse-border);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Social Media - Pricing
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Section Subtitle
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.title-center-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-pricing-area.inner
+.title-center-wrapper
+.pre svg path {
+    fill: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.title-center-wrapper
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Section Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.title-center-wrapper
+p.desc {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pricing Card - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pricing Card Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four:hover {
+    border-color: var(--senverse-light);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, .08);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Active / Featured Plan
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four.active {
+    background: #f2f6fa;
+    border: 2px solid var(--senverse-primary);
+
+    box-shadow:
+        0 16px 35px rgba(27, 54, 93, .10);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Plan Tag
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.pricing-top-area
+.top
+.tag {
+    color: var(--senverse-primary);
+}
+
+
+/* Active tag */
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four.active
+.pricing-top-area
+.top
+.tag {
+    color: var(--senverse-primary);
+    font-weight: 600;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Top Icon
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.pricing-top-area
+.top
+.icon svg path {
+    fill: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Price
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.dollar-area
+h2.title {
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.dollar-area
+.time {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Plan Description
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.pricing-top-area
+.bottom > p {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pricing Button - Normal
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.rts-btn.btn-primary {
+    background: transparent;
+    border: 1px solid var(--senverse-primary);
+    color: var(--senverse-primary);
+}
+
+
+/* Normal button hover */
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.rts-btn.btn-primary:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #ffffff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Active Plan Button
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four.active
+.rts-btn.btn-primary {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #ffffff;
+}
+
+
+/* Active button hover */
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four.active
+.rts-btn.btn-primary:hover {
+    background: var(--senverse-medium);
+    border-color: var(--senverse-medium);
+    color: #ffffff;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Features Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.pricing-body
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Feature Check
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.single-check-area
+i {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four
+.single-check-area
+p {
+    color: #344054;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Active Plan Feature Check
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-pricing-area.inner
+.pricing-wrapper-four.active
+.single-check-area
+i {
+    color: var(--senverse-primary);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Resources - Breadcrumb
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-service-details-breadcrumb-area {
+    background: #ffffff;
+}
+
+/* Breadcrumb */
+body.demo-software-company
+.rts-service-details-breadcrumb-area
+.breadcrumb-area
+ul li a {
+    color: #667085;
+}
+
+body.demo-software-company
+.rts-service-details-breadcrumb-area
+.breadcrumb-area
+ul li a:hover {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-service-details-breadcrumb-area
+.breadcrumb-area
+ul li .active {
+    color: var(--senverse-primary);
+}
+
+/* Arrow */
+body.demo-software-company
+.rts-service-details-breadcrumb-area
+.breadcrumb-area
+ul li i {
+    color: #98a2b3;
+}
+
+/* H1 */
+body.demo-software-company
+.rts-service-details-breadcrumb-area
+.breadcrumb-area
+h1.title {
+    color: var(--senverse-primary);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Resources - Blog List
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Blog Card
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+    border-radius: 8px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--senverse-light);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, .08);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Category
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.inner-content-blog > span {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Blog Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+h5.title {
+    color: var(--senverse-primary);
+
+    transition: color .3s ease;
+}
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+a:hover h5.title {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Learn More
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line {
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line span,
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line i {
+    color: var(--senverse-primary);
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line:hover span,
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line:hover i {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-blog-list-wrapper
+.single-blog-style-one
+.btn-line:hover i {
+    transform: translateX(4px);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Resources - Pagination
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.blog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+}
+
+body.demo-software-company
+.blog-pagination a {
+    width: 46px;
+    height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--senverse-border);
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--senverse-primary);
+
+    background: #ffffff;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+    text-decoration: none;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pagination Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.blog-pagination a:hover {
+    background: var(--senverse-primary);
+
+    border-color: var(--senverse-primary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pagination Active
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.blog-pagination
+.active {
+    background: var(--senverse-primary);
+
+    border-color: var(--senverse-primary);
+
+    color: #ffffff;
+
+    pointer-events: none;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Pagination Arrow
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.blog-pagination
+.page-arrow {
+    font-size: 18px;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Responsive
+|----------------------------------------------------------------------
+*/
+
+@media (max-width: 575px) {
+
+    body.demo-software-company
+    .blog-pagination {
+        gap: 7px;
+        margin-top: 35px;
+    }
+
+    body.demo-software-company
+    .blog-pagination a {
+        width: 40px;
+        height: 40px;
+
+        font-size: 14px;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Resources - Sidebar
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Widget Wrapper
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+    border-radius: 8px;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Widget Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized
+.wized-header
+h5.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Categories
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories {
+    margin: 0;
+    padding: 0;
+}
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories + .single-categories {
+    margin-top: 10px;
+}
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories li {
+    list-style: none;
+}
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--senverse-border);
+    border-radius: 6px;
+
+    color: var(--senverse-primary);
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories li a i {
+    color: var(--senverse-primary);
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Category Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories li a:hover {
+    background: var(--senverse-bg-light);
+    border-color: var(--senverse-light);
+
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company
+.rts-single-wized.Categories
+.single-categories li a:hover i {
+    color: var(--senverse-light);
+    transform: translateX(4px);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Recent Posts
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Recent Thumbnail
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.thumbnail {
+    width: 110px;
+    min-width: 110px;
+    height: 80px;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+}
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.thumbnail a {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .3s ease;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Thumbnail Hover
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single:hover
+.thumbnail img {
+    transform: scale(1.04);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Recent Content
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.content-area {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Published Date
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.user {
+    color: #667085;
+}
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.user i {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.user span {
+    color: #667085;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Recent Post Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.content-area
+h6.title {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.55;
+
+    color: var(--senverse-primary);
+
+    transition: color .3s ease;
+}
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single
+.post-title:hover
+h6.title {
+    color: var(--senverse-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Recent Post Spacing
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-single-wized.Recent-post
+.recent-post-single + .recent-post-single {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--senverse-border);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Resources - Blog Detail
+|--------------------------------------------------------------------------
+*/
+
+/* Featured image */
+body.demo-software-company
+.rts-blog-detials-area-start
+.thumbnail-top {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.thumbnail-top img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Meta */
+body.demo-software-company
+.rts-blog-detials-area-start
+.inner-content-blog-details
+.top-area span {
+    color: var(--senverse-light);
+}
+
+
+/* H1 */
+body.demo-software-company
+.rts-blog-detials-area-start
+.inner-content-blog-details
+h1.title {
+    color: var(--senverse-primary);
+}
+
+
+/* Short description */
+body.demo-software-company
+.rts-blog-detials-area-start
+.inner-content-blog-details
+p.disc {
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Main Blog Content
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content {
+    color: #475467;
+    line-height: 1.8;
+}
+
+
+/* Paragraph */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content p {
+    color: #475467;
+}
+
+
+/* H2 */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content h2 {
+    color: var(--senverse-primary);
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+
+/* H3 */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content h3 {
+    color: var(--senverse-primary);
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+
+/* H4-H6 */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content h4,
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content h5,
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content h6 {
+    color: var(--senverse-primary);
+}
+
+
+/* Links inside article */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content a {
+    color: var(--senverse-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content a:hover {
+    color: var(--senverse-light);
+}
+
+
+/* Lists */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content ul,
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content ol {
+    color: #475467;
+}
+
+
+/* Strong */
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content strong {
+    color: #344054;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Blockquote
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content blockquote {
+    background: var(--senverse-bg-light);
+
+    border-left: 4px solid var(--senverse-primary);
+
+    padding: 22px 24px;
+
+    color: #475467;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Tables
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content table th {
+    background: var(--senverse-primary);
+    color: #ffffff;
+}
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content table th,
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content table td {
+    padding: 12px 14px;
+
+    border: 1px solid var(--senverse-border);
+}
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.inner-content-blog-details
+h1.title {
+    color: var(--senverse-primary);
+
+    font-size: 38px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Images inside article
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+
+    margin: 20px 0;
+}
+
+@media (max-width: 991px) {
+
+    body.demo-software-company
+    .rts-blog-detials-area-start
+    .inner-content-blog-details
+    h1.title {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    body.demo-software-company
+    .rts-blog-detials-area-start
+    .inner-content-blog-details
+    h1.title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+}
+
+
+.rts-service-details-breadcrumb-area .breadcrumb-area {
+    max-width: 1100px;
+}
+
+/* Breadcrumb list */
+body.demo-software-company
+.resource-detail-breadcrumb
+.breadcrumb-area ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Current post */
+body.demo-software-company
+.resource-detail-breadcrumb
+.breadcrumb-area ul li .active {
+    color: var(--senverse-primary);
+    line-height: 1.5;
+}
+
+/*
+|--------------------------------------------------------------------------
+| About Us - Hero
+|--------------------------------------------------------------------------
+*/
+
+/*
+|----------------------------------------------------------------------
+| Hero Background
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-breadcrumb-area {
+    background: var(--senverse-bg-light);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Breadcrumb
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-content
+ul li a {
+    color: #667085;
+    transition: color .3s ease;
+}
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-content
+ul li a:hover {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-content
+ul li i {
+    color: #98a2b3;
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Active Breadcrumb
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-content
+ul li.active a {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Hero Title
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-content
+h1.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|----------------------------------------------------------------------
+| Hero Image
+|----------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+body.demo-software-company
+.rts-about-breadcrumb-area
+.rts-about-breadcrumb-image img {
+    width: 100%;
+    display: block;
+}
+
+/*
+|--------------------------------------------------------------------------
+| About Us - Company Values
+|--------------------------------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------------------------------
+| About Us - Company Values
+|--------------------------------------------------------------------------
+*/
+
+/* Subtitle */
+body.demo-software-company
+.rts-company-values-area
+.title-center-wrapper
+.pre {
+    color: var(--senverse-light);
+}
+
+/* Section Title */
+body.demo-software-company
+.rts-company-values-area
+.title-center-wrapper
+h2.title {
+    color: var(--senverse-primary);
+}
+
+.rts-mission-content-about-page .arrow-text-animation .disc1 {
+    font-size: 56px !important;
+}
+/*
+|--------------------------------------------------------------------------
+| Value Card
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area {
+    background: transparent !important;
+
+    border: 1px solid var(--senverse-border) !important;
+    border-radius: 8px;
+
+    box-shadow: none;
+
+    transition:
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Value Card Hover
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area:hover {
+    background: transparent !important;
+
+    border-color: var(--senverse-light) !important;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(27, 54, 93, .08);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Icon - No Background
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area
+.icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area:hover
+.icon {
+    background: transparent !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Value Title
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area
+.content
+h3.title {
+    color: var(--senverse-primary);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Value Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-company-values-area
+.single-company-value-area
+.content
+p.disc {
+    color: #667085;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Senverse Header
+|--------------------------------------------------------------------------
+*/
+
+/* Sticky gốc + Senverse Sticky */
+.header--sticky.sticky,
+.header--sticky.senverse-sticky {
+    position: fixed !important;
+    top: 0;
+    display: block;
+    z-index: 1111;
+    width: 100%;
+
+    background: var(--senverse-primary) !important;
+
+    box-shadow: 0 7px 18px rgba(27, 54, 93, 0.08);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Header Size
+|--------------------------------------------------------------------------
+*/
+
+@media (min-width: 1200px) {
+
+    .header-one .header-wrapper-main {
+        height: 100px;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-one .logo-area img {
+        width: 200px !important;
+        max-width: 200px !important;
+        height: auto !important;
+        max-height: 70px !important;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Main Navigation
+|--------------------------------------------------------------------------
+*/
+
+.header-one .nav-area > ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header-one .nav-area > ul > li > a {
+    color: #ffffff !important;
+    white-space: nowrap;
+}
+
+.header-one .nav-area > ul > li > a:hover {
+    color: var(--senverse-light) !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Language
+|--------------------------------------------------------------------------
+*/
+
+.header-one
+.select-area.language
+.main-nav > a {
+    color: #ffffff !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Get Started Button
+|--------------------------------------------------------------------------
+*/
+
+.header-one
+.button-wrapper-flex
+.rts-btn.btn-primary {
+    background: var(--senverse-light) !important;
+    border-color: var(--senverse-light) !important;
+    color: #ffffff !important;
+}
+
+.header-one
+.button-wrapper-flex
+.rts-btn.btn-primary:hover {
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--senverse-primary) !important;
+}
+
+body.demo-software-company {
+    padding-top: 100px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+/* Main footer background */
+body.demo-software-company
+.rts-footer-one.bg_dark {
+    background: var(--senverse-dark) !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer Logo
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.left-wiget
+.logo img {
+    width: 180px;
+    max-width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer Description
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.left-wiget
+p.disc {
+    color: #b8c5d6;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Contact Information
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.footer-contact-item {
+    color: #d7e0ea;
+}
+
+body.demo-software-company
+.rts-footer-one
+.footer-contact-item i {
+    color: var(--senverse-light);
+}
+
+body.demo-software-company
+.rts-footer-one
+.footer-contact-item span,
+body.demo-software-company
+.rts-footer-one
+.footer-contact-item a {
+    color: #d7e0ea;
+}
+
+body.demo-software-company
+.rts-footer-one
+.footer-contact-item a:hover {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer Menu Titles
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.footer-wized-wrapper
+.single
+h6.title {
+    color: #ffffff;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer Menu Links
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.footer-wized-wrapper
+.single
+ul li a {
+    color: #b8c5d6;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+body.demo-software-company
+.rts-footer-one
+.footer-wized-wrapper
+.single
+ul li a:hover {
+    color: var(--senverse-light);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Copyright Area
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company
+.rts-footer-one
+.copyright-area {
+    border-top: 1px solid rgba(255, 255, 255, .10);
+}
+
+
+/* Copyright text */
+body.demo-software-company
+.rts-footer-one
+.copyright-area
+p.disc {
+    color: #98a2b3;
+}
+
+
+/* Copyright links */
+body.demo-software-company
+.rts-footer-one
+.copyright-area
+ul li a {
+    color: #b8c5d6;
+}
+
+body.demo-software-company
+.rts-footer-one
+.copyright-area
+ul li a:hover {
+    color: var(--senverse-light);
+}
+
+/* Normal */
+body.demo-software-company
+.header-one
+.nav-area > ul > li.main-nav > a {
+    color: #ffffff !important;
+}
+
+/* Hover */
+body.demo-software-company
+.header-one
+.nav-area > ul > li.main-nav:hover > a {
+    color: var(--senverse-light) !important;
+}
+
+/* Sticky */
+body.demo-software-company
+.header-one.header--sticky.sticky
+.nav-area > ul > li.main-nav:hover > a,
+body.demo-software-company
+.header-one.header--sticky.senverse-sticky
+.nav-area > ul > li.main-nav:hover > a {
+    color: var(--senverse-light) !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Senverse Typography
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #667085;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Headings
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company h1,
+body.demo-software-company h2,
+body.demo-software-company h3,
+body.demo-software-company h4,
+body.demo-software-company h5,
+body.demo-software-company h6 {
+    font-family: "Inter Tight", sans-serif;
+    color: var(--senverse-primary);
+}
+
+body.demo-software-company h1 {
+    font-size: 56px !important;
+    line-height: 1.15 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company h2 {
+    font-size: 44px !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company h3 {
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company h4 {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company h5 {
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company h6 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Paragraph
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Section Label
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company .pre,
+body.demo-software-company .pre-title {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Buttons
+|--------------------------------------------------------------------------
+*/
+
+body.demo-software-company .rts-btn {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+@media (max-width: 991px) {
+
+    body.demo-software-company h1 {
+        font-size: 44px !important;
+    }
+
+    body.demo-software-company h2 {
+        font-size: 36px !important;
+    }
+
+    body.demo-software-company h3 {
+        font-size: 28px !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    body.demo-software-company h1 {
+        font-size: 36px !important;
+    }
+
+    body.demo-software-company h2 {
+        font-size: 30px !important;
+    }
+
+    body.demo-software-company h3 {
+        font-size: 24px !important;
+    }
+
+    body.demo-software-company h4 {
+        font-size: 22px !important;
+    }
+
+    body.demo-software-company h5 {
+        font-size: 20px !important;
+    }
+}

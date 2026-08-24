@@ -1,4 +1,4 @@
-    <header class="header-one header--sticky">
+    <header class="header-one header--sticky senverse-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
