@@ -22,8 +22,6 @@ class SolutionController extends Controller
 
         $this->view['category'] = $category;
 
-        $seo = SeoService::home();
-        $this->view['seo'] = $seo;
 
 
         switch ($slug) {
@@ -69,7 +67,7 @@ class SolutionController extends Controller
         ])
             ->active()
             ->where('slug', 'pos-system')
-            ->first();
+            ->firstOrFail();
 
         $this->view['page'] = $page;
 
@@ -194,7 +192,7 @@ class SolutionController extends Controller
         ])
             ->active()
             ->where('slug', 'merchant-services')
-            ->first();
+            ->firstOrFail();
 
         $this->view['page'] = $page;
 
@@ -283,7 +281,7 @@ class SolutionController extends Controller
         ])
             ->active()
             ->where('slug', $slug)
-            ->first();
+            ->firstOrFail();
 
         $this->view['page'] = $page;
         

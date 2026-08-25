@@ -37,6 +37,11 @@ if (!function_exists('setting')) {
 
         $translations = $settings[$key]['translations'] ?? [];
 
+        $defaultLocale = config(
+            'languages.default',
+            'en'
+        );
+
         return $translations[$locale]
             ?? $translations['vi']
             ?? $default;

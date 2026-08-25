@@ -39,21 +39,29 @@
                         <div class="inner-content-blog-details">
 
                             {{-- Post Meta --}}
-                            <div class="top-area">
+                                <div class="top-area">
 
-                                @if ($post->author)
-                                    <span>
-                                        {{ $post->author->name }}
-                                    </span>
-                                @endif
+                                    @if ($category->name)
+                                        <span>
+                                           
+                                             {{ $category->name }}
+                                        </span>
+                                    @endif
 
-                                @if ($post->published_at)
-                                    <span>
-                                        • {{ $post->published_at->format('d M, Y') }}
-                                    </span>
-                                @endif
+                                    @if ($post->published_at)
+                                        <span>
+                                            <i class="fa-regular fa-calendar"></i>
 
-                            </div>
+                                            {{ app()->getLocale() === 'vi'
+                                                ? 'Đăng ngày'
+                                                : 'Published'
+                                            }}
+
+                                            {{ $post->published_at->format('d/m/Y') }}
+                                        </span>
+                                    @endif
+
+                                </div>
 
 
                             {{-- Post Title --}}

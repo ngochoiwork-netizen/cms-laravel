@@ -4010,3 +4010,40 @@ body.demo-software-company .rts-btn {
     flex: 1;
     line-height: 1.5;
 }
+
+body.demo-software-company
+.rts-blog-detials-area-start
+.inner-content-blog-details
+h1.title {
+    color: var(--senverse-primary);
+
+    font-size: 34px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 991px) {
+
+    body.demo-software-company
+    .rts-blog-detials-area-start
+    .inner-content-blog-details
+    h1.title {
+        font-size: 30px !important;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    body.demo-software-company
+    .rts-blog-detials-area-start
+    .inner-content-blog-details
+    h1.title {
+        font-size: 26px !important;
+        line-height: 1.35 !important;
+    }
+
+}

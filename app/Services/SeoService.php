@@ -84,16 +84,39 @@ class SeoService
                 : ($urls[$locale] ?? url()->current());
 
         /*
+        /*
         |--------------------------------------------------------------------------
         | Hreflang
         |--------------------------------------------------------------------------
+        |
+        | Chỉ khai báo hreflang cho những ngôn ngữ
+        | thực sự có translation.
+        |
         */
 
-        $seo['hreflang'] = array_filter([
-            'en' => $urls['en'] ?? null,
-            'vi' => $urls['vi'] ?? null,
-        ]);
+        $availableLocales = [];
 
+        if (
+            isset($model->translations)
+            && $model->translations
+        ) {
+            $availableLocales = $model->translations
+                ->pluck('locale')
+                ->unique()
+                ->toArray();
+        }
+
+        $seo['hreflang'] = [];
+
+        foreach (['en', 'vi'] as $lang) {
+
+            if (
+                in_array($lang, $availableLocales, true)
+                && !empty($urls[$lang])
+            ) {
+                $seo['hreflang'][$lang] = $urls[$lang];
+            }
+        }
         /*
         |--------------------------------------------------------------------------
         | X Default
@@ -104,7 +127,9 @@ class SeoService
         */
 
         $seo['x_default'] =
-            $urls['en'] ?? null;
+            $seo['hreflang']['en']
+            ?? $seo['hreflang']['vi']
+            ?? null;
 
         /*
         |--------------------------------------------------------------------------

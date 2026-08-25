@@ -113,7 +113,7 @@ class ContactController extends Controller
         |--------------------------------------------------------------------------
         */
 
-        $receiver = "ngochoi.work@gmail.com";
+        $receiver = setting('contact_email') ?: setting('email');
 
         if (!$receiver) {
             return back()
@@ -135,10 +135,12 @@ class ContactController extends Controller
 
 
         return redirect()
-            ->route('contact')
+            ->to(localized_route('contact'))
             ->with(
                 'success',
-                'Thank you for contacting Senverse. Our team will get back to you soon.'
+                app()->getLocale() === 'vi'
+                    ? 'Cảm ơn bạn đã liên hệ Senverse. Đội ngũ của chúng tôi sẽ phản hồi sớm nhất.'
+                    : 'Thank you for contacting Senverse. Our team will get back to you soon.'
             );
     }
 }

@@ -24,6 +24,9 @@ class BlogController extends Controller
         ])
             ->active()
             ->where('slug', $categorySlug)
+            ->whereHas('parent', function ($query) {
+                $query->where('slug', 'resource');
+            })
             ->firstOrFail();
         $this->view['category'] = $category;
 
@@ -40,18 +43,24 @@ class BlogController extends Controller
             'thumbnail',
             'author',
         ])
-            ->active()
+            ->published()
             ->where('category_id', $category->id)
             ->orderByDesc('published_at')
             ->paginate(12);
         $this->view['posts'] = $posts;
         $breadcrumbs = [
             [
-                'label' => 'Home',
+                'label' => app()->getLocale() === 'vi'
+                    ? 'Trang Chủ'
+                    : 'Home',
+
                 'url' => localized_route('home'),
             ],
             [
-                'label' => 'Resources',
+                'label' => app()->getLocale() === 'vi'
+                    ? 'Tài Nguyên'
+                    : 'Resources',
+
                 'url' => null,
             ],
             [
@@ -91,9 +100,10 @@ class BlogController extends Controller
             'thumbnail',
             'category.translation',
         ])
-        ->active()
+        ->published()
         ->where('category_id', $category->id)
-        ->orderByDesc('updated_at')
+        ->orderByDesc('published_at')
+        ->featured()
         ->limit(3)
         ->get();
         $this->view['recentPosts'] = $recentPosts;
@@ -143,7 +153,7 @@ class BlogController extends Controller
             'category.translation',
             'tags.translation',
         ])
-            ->active()
+            ->published()
             ->where('category_id', $category->id)
             ->where('slug', $postSlug)
             ->firstOrFail();
