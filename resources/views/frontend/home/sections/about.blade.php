@@ -146,7 +146,7 @@
                         @if ($aboutSection->button_text && $aboutSection->button_link)
 
                             <a
-                                href="{{ $aboutSection->button_link }}"
+                                href="{{ localized_url($aboutSection->button_link) }}"
                                 class="about-btn"
                             >
 

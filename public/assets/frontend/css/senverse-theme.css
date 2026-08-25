@@ -3976,3 +3976,30 @@ body.demo-software-company .rts-btn {
         font-size: 20px !important;
     }
 }
+
+
+.pricing-wrapper-four .pricing-body .check-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pricing-wrapper-four .pricing-body .single-check-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.pricing-wrapper-four .pricing-body .single-check-area i {
+    flex: 0 0 auto;
+    margin-top: 5px;
+}
+
+.pricing-wrapper-four .pricing-body .single-check-area p {
+    margin: 0;
+    text-align: left;
+    width: auto;
+    flex: 1;
+    line-height: 1.5;
+}

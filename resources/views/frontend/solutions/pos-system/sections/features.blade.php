@@ -55,10 +55,6 @@
                                         </p>
                                     @endif
 
-                                    <a href="#" class="round-btn">
-                                        <i class="fa-sharp-duotone fa-light fa-arrow-right"></i>
-                                    </a>
-
                                 </div>
 
                             </div>

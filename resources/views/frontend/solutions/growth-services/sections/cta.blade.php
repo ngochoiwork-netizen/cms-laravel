@@ -33,7 +33,7 @@
                     @if ($ctaSection->button_text && $ctaSection->button_link)
 
                         <a
-                            href="{{ $ctaSection->button_link }}"
+                            href="{{ localized_url($ctaSection->button_link) }}"
                             class="rts-btn btn-primary with-arrow btn-white"
                         >
 

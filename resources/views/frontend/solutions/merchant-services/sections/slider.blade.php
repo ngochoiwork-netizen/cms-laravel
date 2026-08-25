@@ -45,7 +45,7 @@
                         </div>
 
                         @if ($slider?->button_text && $slider?->link)
-                            <a href="{{ $slider->link }}" class="rts-btn btn-primary">
+                            <a href="{{ localized_url($slider->link) }}" class="rts-btn btn-primary">
                                 {{ $slider->button_text }}
                             </a>
                         @else

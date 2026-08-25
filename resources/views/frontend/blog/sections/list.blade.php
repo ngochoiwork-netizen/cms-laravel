@@ -4,10 +4,10 @@
 
         <div class="single-blog-style-one">
 
-            <a href="{{ route('resources.show', [
-                'categorySlug' => $category->slug,
-                'postSlug' => $post->slug
-            ]) }}" class="thumbnail-blog">
+            <a href="{{ localized_route('resources.show', [
+                        'categorySlug' => $category->slug,
+                        'postSlug' => $post->slug,
+                    ]) }}" class="thumbnail-blog">
 
                 @if ($post->thumbnail)
                     <img
@@ -22,19 +22,19 @@
 
                 <span>{{ $category->name }}</span>
 
-                <a href="{{ route('resources.show', [
-                    'categorySlug' => $category->slug,
-                    'postSlug' => $post->slug
-                ]) }}">
+                <a href="{{ localized_route('resources.show', [
+                            'categorySlug' => $category->slug,
+                            'postSlug' => $post->slug,
+                        ]) }}">
                     <h5 class="title">
                         {{ $post->title }}
                     </h5>
                 </a>
 
-                <a href="{{ route('resources.show', [
-                    'categorySlug' => $category->slug,
-                    'postSlug' => $post->slug
-                ]) }}" class="btn-line">
+                <a href="{{ localized_route('resources.show', [
+                            'categorySlug' => $category->slug,
+                            'postSlug' => $post->slug,
+                        ]) }}" class="btn-line">
 
                     <span>Learn More</span>
 

@@ -42,7 +42,10 @@
 
                     <div class="single-blog-style-one br-8">
                         
-                        <a href="{{ url($post->slug) }}"
+                        <a href="{{ localized_route('resources.show', [
+                                    'categorySlug' => $post->category->slug,
+                                    'postSlug' => $post->slug,
+                                ]) }}"
                             class="thumbnail-blog br-10">
 
                             @if ($post->thumbnail)
@@ -72,7 +75,10 @@
 
                             @endif
 
-                            <a href="{{ url($post->slug) }}">
+                            <a href="{{ localized_route('resources.show', [
+                                            'categorySlug' => $post->category->slug,
+                                            'postSlug' => $post->slug,
+                                        ]) }}">
 
                                 <h5 class="title">
 
@@ -82,7 +88,10 @@
 
                             </a>
 
-                            <a href="{{ url($post->slug) }}"
+                            <a href="{{ localized_route('resources.show', [
+                                            'categorySlug' => $post->category->slug,
+                                            'postSlug' => $post->slug,
+                                        ]) }}"
                                 class="btn-line">
 
                                 <span>

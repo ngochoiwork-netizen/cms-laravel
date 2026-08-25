@@ -79,7 +79,6 @@
             @endif
 
         </div>
-
     </div>
     <!-- rts working process area end -->
 

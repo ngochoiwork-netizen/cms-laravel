@@ -36,7 +36,7 @@
 
                             <div class="right-area">
 
-                                <a href="{{ url($serviceSection->button_link) }}">
+                                <a href="{{ localized_url($serviceSection->button_link) }}">
 
                                     <span>
                                         {{ $serviceSection->button_text }}
@@ -74,7 +74,7 @@
 
                                     @endif
 
-                                    <a href="{{ url($service['link'] ?? '#') }}"
+                                    <a href="{{ localized_url($service['link'] ?? null) }}"
                                         class="round-btn">
 
                                         <i class="fa-light fa-arrow-right"></i>
@@ -85,7 +85,7 @@
 
                                 <h5 class="title">
 
-                                    <a href="{{ url($service['link'] ?? '#') }}">
+                                    <a href="{{ localized_url($service['link'] ?? null) }}">
 
                                         {{ $service['title'] ?? '' }}
 

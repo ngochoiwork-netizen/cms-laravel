@@ -133,7 +133,7 @@
 
                 <form
                     method="POST"
-                    action="{{ route('contact.submit') }}"
+                    action="{{ localized_route('contact.submit') }}"
                     class="contact-form-main-wrapper-contact form__content"
                 >
 
@@ -269,7 +269,7 @@
                                 for assistance. View our
 
                                 <a
-                                    href="{{ url('/privacy-policy') }}"
+                                    href="{{ localized_url('/privacy-policy') }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -279,7 +279,7 @@
                                 and
 
                                 <a
-                                    href="{{ url('/terms-and-conditions') }}"
+                                    href="{{ localized_url('/privacy-policy') }}"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

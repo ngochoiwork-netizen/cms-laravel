@@ -135,7 +135,7 @@
                                         @if (!empty($plan['button_text']))
 
                                             <a
-                                                href="{{ url($plan['button_link'] ?? '/contact') }}"
+                                                href="{{ localized_url($plan['button_link'] ?? '/contact') }}"
                                                 class="rts-btn btn-primary"
                                             >
                                                 {{ $plan['button_text'] }}

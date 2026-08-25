@@ -1,8 +1,6 @@
 @if ($missionSection)
-
     <!-- rts mission areas start -->
     <div class="rts-mission-area rts-section-gap">
-
         <div class="container">
 
             <div class="row">

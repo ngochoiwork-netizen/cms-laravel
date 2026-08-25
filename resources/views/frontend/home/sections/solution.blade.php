@@ -98,7 +98,7 @@
                                     @if (!empty($product['link']))
 
                                         <a
-                                            href="{{ url($product['link']) }}"
+                                            href="{{ localized_url($product['link']) }}"
                                             class="rts-btn btn-primary mt--30"
                                         >
                                             {{ app()->getLocale() === 'vi'

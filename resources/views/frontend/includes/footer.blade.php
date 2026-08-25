@@ -13,7 +13,7 @@
                 <div class="left-wiget">
 
                     {{-- Logo --}}
-                    <a class="logo" href="{{ url('/') }}">
+                    <a class="logo" href="{{ localized_route('home') }}">
 
                         @if (setting_media('logo'))
                             <img
@@ -126,10 +126,8 @@
 
                                             <li>
 
-                                                <a href="{{ !empty($item['link']) ? url($item['link']) : '#' }}">
-
+                                                <a href="{{ localized_url($item['link'] ?? null) }}">
                                                     {{ $item['title'] }}
-
                                                 </a>
 
                                             </li>
@@ -178,10 +176,8 @@
 
                                             <li>
 
-                                                <a href="{{ !empty($item['link']) ? url($item['link']) : '#' }}">
-
+                                                <a href="{{ localized_url($item['link'] ?? null) }}">
                                                     {{ $item['title'] }}
-
                                                 </a>
 
                                             </li>
@@ -230,10 +226,8 @@
 
                                             <li>
 
-                                                <a href="{{ !empty($item['link']) ? url($item['link']) : '#' }}">
-
+                                                <a href="{{ localized_url($item['link'] ?? null) }}">
                                                     {{ $item['title'] }}
-
                                                 </a>
 
                                             </li>
@@ -387,8 +381,7 @@
                         </p>
 
 
-                        {{-- Có thể giữ Policy link ở copyright --}}
-
+                        {{-- Policy links --}}
                         @if (!empty($policyItems))
 
                             <ul>
@@ -399,10 +392,8 @@
 
                                         <li>
 
-                                            <a href="{{ !empty($item['link']) ? url($item['link']) : '#' }}">
-
+                                            <a href="{{ localized_url($item['link'] ?? null) }}">
                                                 {{ $item['title'] }}
-
                                             </a>
 
                                         </li>

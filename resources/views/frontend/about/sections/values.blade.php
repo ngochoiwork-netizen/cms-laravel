@@ -168,7 +168,6 @@
                                 tools to attract customers, build loyalty, and grow
                                 their business over time.
                             </p>
-
                         </div>
 
                     </div>

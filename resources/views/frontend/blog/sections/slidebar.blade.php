@@ -17,69 +17,69 @@
 
                 <ul class="single-categories">
                     <li>
-                        <a href="{{ route('resources.category', [
-                            'categorySlug' => $item->slug
-                        ]) }}">
-                            {{ $item->name }}
+                        <a href="{{ localized_route('resources.category', [
+                                    'categorySlug' => $item->slug
+                                ]) }}">
+                                                        {{ $item->name }}
 
-                            <i class="far fa-long-arrow-right"></i>
-                        </a>
-                    </li>
-                </ul>
+                                                        <i class="far fa-long-arrow-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
 
-            @endforeach
+                                        @endforeach
 
-        </div>
-    </div>
+                                    </div>
+                                </div>
 
 
-    {{-- Recent Posts --}}
-    <div class="rts-single-wized Recent-post">
-        <div class="wized-header">
-            <h5 class="title">
-                Recent Posts
-            </h5>
-        </div>
+                                {{-- Recent Posts --}}
+                                <div class="rts-single-wized Recent-post">
+                                    <div class="wized-header">
+                                        <h5 class="title">
+                                            Recent Posts
+                                        </h5>
+                                    </div>
 
-        <div class="wized-body">
+                                    <div class="wized-body">
 
-            @foreach ($recentPosts as $recentPost)
+                                        @foreach ($recentPosts as $recentPost)
 
-                <div class="recent-post-single">
+                                            <div class="recent-post-single">
 
-                    @if ($recentPost->thumbnail)
-                        <div class="thumbnail">
-                            <a href="{{ route('resources.show', [
-                                'categorySlug' => $recentPost->category->slug,
-                                'postSlug' => $recentPost->slug
-                            ]) }}">
+                                                @if ($recentPost->thumbnail)
+                                                    <div class="thumbnail">
+                                                        <a href="{{ localized_route('resources.show', [
+                                                                    'categorySlug' => $recentPost->category->slug,
+                                                                    'postSlug' => $recentPost->slug,
+                                                                ]) }}">
 
-                                <img
-                                    src="{{ $recentPost->thumbnail->url }}"
-                                    alt="{{ $recentPost->thumbnail->alt_text ?: $recentPost->title }}"
-                                >
+                                                            <img
+                                                                src="{{ $recentPost->thumbnail->url }}"
+                                                                alt="{{ $recentPost->thumbnail->alt_text ?: $recentPost->title }}"
+                                                            >
 
-                            </a>
-                        </div>
-                    @endif
+                                                        </a>
+                                                    </div>
+                                                @endif
 
-                    <div class="content-area">
+                                                <div class="content-area">
 
-                        @if ($recentPost->published_at)
-                            <div class="user">
-                                <i class="fal fa-clock"></i>
-                                <span>
-                                    {{ $recentPost->published_at->format('d M, Y') }}
-                                </span>
-                            </div>
-                        @endif
+                                                    @if ($recentPost->published_at)
+                                                        <div class="user">
+                                                            <i class="fal fa-clock"></i>
+                                                            <span>
+                                                                {{ $recentPost->published_at->format('d M, Y') }}
+                                                            </span>
+                                                        </div>
+                                                    @endif
 
-                        <a
-                            class="post-title"
-                            href="{{ route('resources.show', [
-                                'categorySlug' => $recentPost->category->slug,
-                                'postSlug' => $recentPost->slug
-                            ]) }}"
+                                                    <a
+                                                        class="post-title"
+                                                        href="{{ localized_route('resources.show', [
+                                                                'categorySlug' => $recentPost->category->slug,
+                                                                'postSlug' => $recentPost->slug,
+                                                            ]) }}"
                         >
                             <h6 class="title">
                                 {{ $recentPost->title }}

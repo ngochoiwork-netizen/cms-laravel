@@ -97,7 +97,7 @@
 
                                 @if ($whySection->button_text && $whySection->button_link)
 
-                                    <a href="{{ url($whySection->button_link) }}"
+                                    <a href="{{ localized_url($whySection->button_link) }}"
                                         class="rts-btn btn-primary">
 
                                         {{ $whySection->button_text }}

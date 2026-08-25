@@ -179,30 +179,65 @@ Route::prefix('admin')
         ->name('frontend.language.switch');
 
 
-    Route::get('/', [HomeController::class, 'index'])
-        ->name('home');
+    /*
+    |--------------------------------------------------------------------------
+    | FRONTEND ROUTES
+    |--------------------------------------------------------------------------
+    */
+
+    $frontendRoutes = function () {
+
+        Route::get('/', [HomeController::class, 'index'])
+            ->name('home');
+
+        Route::get('/about-us', [AboutController::class, 'index'])
+            ->name('about');
+
+        Route::get('/contact', [ContactController::class, 'index'])
+            ->name('contact');
+
+        Route::post('/contact', [ContactController::class, 'submit'])
+            ->name('contact.submit');
+
+        Route::get('/solutions/{slug}', [SolutionController::class, 'show'])
+            ->name('solutions.show');
+
+        Route::get('/resources/{categorySlug}', [BlogController::class, 'index'])
+            ->name('resources.category');
+
+        Route::get('/resources/{categorySlug}/{postSlug}', [BlogController::class, 'show'])
+            ->name('resources.show');
+    };
 
 
-    Route::get('/about-us', [AboutController::class, 'index'])
-    ->name('about');
+    /*
+    |--------------------------------------------------------------------------
+    | ENGLISH - DEFAULT
+    |--------------------------------------------------------------------------
+    */
+
+    Route::middleware('locale:en')
+        ->name('en.')
+        ->group($frontendRoutes);
 
 
-    Route::get('/contact', [ContactController::class, 'index'])
-    ->name('contact');
+    /*
+    |--------------------------------------------------------------------------
+    | VIETNAMESE
+    |--------------------------------------------------------------------------
+    */
 
-    Route::post('/contact', [ContactController::class, 'submit'])
-    ->name('contact.submit');
+    Route::prefix('vi')
+        ->middleware('locale:vi')
+        ->name('vi.')
+        ->group($frontendRoutes);
 
 
-    Route::get('/solutions/{slug}',[SolutionController::class, 'show'])
-        ->name('solutions.show');
+    /*
+    |--------------------------------------------------------------------------
+    | SITEMAP
+    |--------------------------------------------------------------------------
+    */
 
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])
         ->name('frontend.sitemap');
-
-
-    Route::get('/resources/{categorySlug}', [BlogController::class, 'index'])
-    ->name('resources.category');
-
-    Route::get('/resources/{categorySlug}/{postSlug}', [BlogController::class, 'show'])
-        ->name('resources.show');

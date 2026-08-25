@@ -73,7 +73,7 @@
                             {{-- Post Content --}}
                             @if ($post->content)
                                 <div class="blog-content">
-                                    {!! $post->content !!}
+                                    {!! localized_html($post->content) !!}
                                 </div>
                             @endif
 

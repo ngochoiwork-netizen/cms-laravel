@@ -38,7 +38,7 @@ class BlogController extends Controller
         $breadcrumbs = [
             [
                 'label' => 'Home',
-                'url' => route('home'),
+                'url' => localized_route('home'),
             ],
             [
                 'label' => 'Resources',
@@ -194,7 +194,7 @@ class BlogController extends Controller
         $breadcrumbs = [
             [
                 'label' => 'Home',
-                'url' => route('home'),
+                'url' => localized_route('home'),
             ],
             [
                 'label' => 'Resources',
@@ -202,7 +202,7 @@ class BlogController extends Controller
             ],
             [
                 'label' => $category->name,
-                'url' => route('resources.category', [
+                'url' => localized_route('resources.category', [
                     'categorySlug' => $category->slug,
                 ]),
             ],

@@ -9,8 +9,6 @@
 @section('content')
 
 
-    @section('content')
-
     {{-- Breadcrumb --}}
     @include('frontend.blog.sections.breadcrumbs')
 
@@ -29,8 +27,5 @@
             </div>
         </div>
     </div>
-
-@endsection
-
 
 @endsection
