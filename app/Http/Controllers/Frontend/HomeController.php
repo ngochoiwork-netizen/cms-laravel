@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Page;
 use App\Models\Product;
+use App\Services\SeoService;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,8 @@ class HomeController extends Controller
 
     public function index()
     {
-
+        $seo = SeoService::home();
+        $this->view['seo'] = $seo;
         $sliders = Slider::with([
             'image',
             'translations',

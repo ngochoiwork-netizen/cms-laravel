@@ -9,7 +9,9 @@ use App\Models\Post;
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMail;
 use App\Models\Setting;
+use App\Services\SeoService;
 use Illuminate\Support\Facades\Mail;
+
 
 
 class ContactController extends Controller
@@ -34,6 +36,10 @@ class ContactController extends Controller
             ->firstOrFail();
 
         $this->view['page'] = $page;
+
+        if ($page) {
+            $this->view['seo'] = SeoService::make($page);
+        }
 
         /*
         |--------------------------------------------------------------------------

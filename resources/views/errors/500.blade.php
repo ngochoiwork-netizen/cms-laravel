@@ -14,13 +14,13 @@
 
     <title>
         {{ $isVi
-            ? 'Không Tìm Thấy Trang | Senverse'
-            : 'Page Not Found | Senverse'
+            ? 'Lỗi Hệ Thống | Senverse'
+            : 'Server Error | Senverse'
         }}
     </title>
 
     <meta name="robots"
-          content="noindex, follow">
+          content="noindex, nofollow">
 
     <link rel="icon"
           href="{{ asset('assets/frontend/images/favicon.png') }}">
@@ -345,36 +345,40 @@
 
                 {{-- Logo --}}
                 <div class="senverse-error-logo">
-                    <a href="{{ $isVi ? route('vi.home') : route('en.home') }}">
+
+                    <a href="{{ $isVi ? '/vi' : '/' }}">
 
                         <img
                             src="{{ setting_media('logo') }}"
                             alt="Senverse">
 
                     </a>
+
                 </div>
 
                 {{-- Label --}}
                 <div class="senverse-error-label">
+
                     <i class="fa-regular fa-circle-exclamation"></i>
 
                     {{ $isVi
-                        ? 'Lỗi 404'
-                        : 'Error 404'
+                        ? 'Lỗi Máy Chủ'
+                        : 'Server Error'
                     }}
+
                 </div>
 
                 {{-- Code --}}
                 <h1 class="senverse-error-code">
-                    404
+                    500
                 </h1>
 
                 {{-- Title --}}
                 <h2 class="senverse-error-title">
 
                     {{ $isVi
-                        ? 'Không Tìm Thấy Trang'
-                        : 'Page Not Found'
+                        ? 'Đã Xảy Ra Sự Cố'
+                        : 'Something Went Wrong'
                     }}
 
                 </h2>
@@ -383,8 +387,8 @@
                 <p class="senverse-error-description">
 
                     {{ $isVi
-                        ? 'Trang bạn đang tìm kiếm không tồn tại, đã được di chuyển hoặc đường dẫn không còn khả dụng.'
-                        : 'The page you are looking for may have been moved, deleted, or the URL may no longer be available.'
+                        ? 'Hệ thống đang gặp sự cố tạm thời. Vui lòng thử lại sau ít phút hoặc quay về trang chủ.'
+                        : 'We are experiencing a temporary issue. Please try again in a few moments or return to the homepage.'
                     }}
 
                 </p>
@@ -392,8 +396,9 @@
                 {{-- Actions --}}
                 <div class="senverse-error-actions">
 
+                    {{-- Back Home --}}
                     <a
-                        href="{{ $isVi ? route('vi.home') : route('en.home') }}"
+                        href="{{ $isVi ? '/vi' : '/' }}"
                         class="senverse-error-home"
                     >
                         <i class="fa-regular fa-house"></i>
@@ -402,18 +407,21 @@
                             ? 'Về Trang Chủ'
                             : 'Back to Home'
                         }}
+
                     </a>
 
+                    {{-- Try Again --}}
                     <a
-                        href="javascript:history.back()"
+                        href="javascript:location.reload()"
                         class="senverse-error-back"
                     >
-                        <i class="fa-regular fa-arrow-left"></i>
+                        <i class="fa-regular fa-rotate-right"></i>
 
                         {{ $isVi
-                            ? 'Quay Lại'
-                            : 'Go Back'
+                            ? 'Thử Lại'
+                            : 'Try Again'
                         }}
+
                     </a>
 
                 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Slider;
 use App\Models\Page;
+use App\Services\SeoService;
 
 class AboutController extends Controller
 {
@@ -28,6 +29,10 @@ class AboutController extends Controller
             ->firstOrFail();
 
         $this->view['page'] = $page;
+
+        if ($page) {
+            $this->view['seo'] = SeoService::make($page);
+        }
 
         /*
         |--------------------------------------------------------------------------

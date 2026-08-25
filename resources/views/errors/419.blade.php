@@ -14,13 +14,13 @@
 
     <title>
         {{ $isVi
-            ? 'Không Tìm Thấy Trang | Senverse'
-            : 'Page Not Found | Senverse'
+            ? 'Phiên Làm Việc Đã Hết Hạn | Senverse'
+            : 'Page Expired | Senverse'
         }}
     </title>
 
     <meta name="robots"
-          content="noindex, follow">
+          content="noindex, nofollow">
 
     <link rel="icon"
           href="{{ asset('assets/frontend/images/favicon.png') }}">
@@ -233,7 +233,6 @@
             font-weight: 600;
 
             color: #ffffff;
-
             background: #1b365d;
 
             transition: all 0.25s ease;
@@ -263,7 +262,6 @@
             font-weight: 600;
 
             color: #1b365d;
-
             background: #ffffff;
 
             transition: all 0.25s ease;
@@ -345,36 +343,40 @@
 
                 {{-- Logo --}}
                 <div class="senverse-error-logo">
-                    <a href="{{ $isVi ? route('vi.home') : route('en.home') }}">
+
+                    <a href="{{ $isVi ? '/vi' : '/' }}">
 
                         <img
                             src="{{ setting_media('logo') }}"
                             alt="Senverse">
 
                     </a>
+
                 </div>
 
                 {{-- Label --}}
                 <div class="senverse-error-label">
-                    <i class="fa-regular fa-circle-exclamation"></i>
+
+                    <i class="fa-regular fa-clock"></i>
 
                     {{ $isVi
-                        ? 'Lỗi 404'
-                        : 'Error 404'
+                        ? 'Phiên Đã Hết Hạn'
+                        : 'Session Expired'
                     }}
+
                 </div>
 
                 {{-- Code --}}
                 <h1 class="senverse-error-code">
-                    404
+                    419
                 </h1>
 
                 {{-- Title --}}
                 <h2 class="senverse-error-title">
 
                     {{ $isVi
-                        ? 'Không Tìm Thấy Trang'
-                        : 'Page Not Found'
+                        ? 'Phiên Làm Việc Đã Hết Hạn'
+                        : 'Page Expired'
                     }}
 
                 </h2>
@@ -383,8 +385,8 @@
                 <p class="senverse-error-description">
 
                     {{ $isVi
-                        ? 'Trang bạn đang tìm kiếm không tồn tại, đã được di chuyển hoặc đường dẫn không còn khả dụng.'
-                        : 'The page you are looking for may have been moved, deleted, or the URL may no longer be available.'
+                        ? 'Phiên làm việc của bạn đã hết hạn. Vui lòng tải lại trang và thực hiện lại thao tác.'
+                        : 'Your session has expired. Please refresh the page and try your action again.'
                     }}
 
                 </p>
@@ -392,9 +394,24 @@
                 {{-- Actions --}}
                 <div class="senverse-error-actions">
 
+                    {{-- Try Again --}}
                     <a
-                        href="{{ $isVi ? route('vi.home') : route('en.home') }}"
+                        href="javascript:location.reload()"
                         class="senverse-error-home"
+                    >
+                        <i class="fa-regular fa-rotate-right"></i>
+
+                        {{ $isVi
+                            ? 'Tải Lại Trang'
+                            : 'Refresh Page'
+                        }}
+
+                    </a>
+
+                    {{-- Back Home --}}
+                    <a
+                        href="{{ $isVi ? '/vi' : '/' }}"
+                        class="senverse-error-back"
                     >
                         <i class="fa-regular fa-house"></i>
 
@@ -402,18 +419,7 @@
                             ? 'Về Trang Chủ'
                             : 'Back to Home'
                         }}
-                    </a>
 
-                    <a
-                        href="javascript:history.back()"
-                        class="senverse-error-back"
-                    >
-                        <i class="fa-regular fa-arrow-left"></i>
-
-                        {{ $isVi
-                            ? 'Quay Lại'
-                            : 'Go Back'
-                        }}
                     </a>
 
                 </div>

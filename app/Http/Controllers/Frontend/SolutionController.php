@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Slider;
 use App\Models\Page;
 use App\Models\Post;
+use App\Services\SeoService;
 
 class SolutionController extends Controller
 {
@@ -20,6 +21,10 @@ class SolutionController extends Controller
             ->firstOrFail();
 
         $this->view['category'] = $category;
+
+        $seo = SeoService::home();
+        $this->view['seo'] = $seo;
+
 
         switch ($slug) {
             case 'pos-system':
@@ -67,6 +72,10 @@ class SolutionController extends Controller
             ->first();
 
         $this->view['page'] = $page;
+
+        if ($page) {
+            $this->view['seo'] = SeoService::make($page);
+        }
 
         $featureSection = $page?->sections
             ->where('key', 'features')
@@ -189,6 +198,10 @@ class SolutionController extends Controller
 
         $this->view['page'] = $page;
 
+        if ($page) {
+            $this->view['seo'] = SeoService::make($page);
+        }
+
         $benefitSection = $page?->sections
             ->where('key', 'benefits')
             ->where('is_active', true)
@@ -273,7 +286,10 @@ class SolutionController extends Controller
             ->first();
 
         $this->view['page'] = $page;
-
+        
+        if ($page) {
+            $this->view['seo'] = SeoService::make($page);
+        }
 
         /*
         |--------------------------------------------------------------------------

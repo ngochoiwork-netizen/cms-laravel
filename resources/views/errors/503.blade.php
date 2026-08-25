@@ -14,36 +14,27 @@
 
     <title>
         {{ $isVi
-            ? 'Không Tìm Thấy Trang | Senverse'
-            : 'Page Not Found | Senverse'
+            ? 'Website Đang Bảo Trì | Senverse'
+            : 'Service Unavailable | Senverse'
         }}
     </title>
 
     <meta name="robots"
-          content="noindex, follow">
+          content="noindex, nofollow">
 
     <link rel="icon"
           href="{{ asset('assets/frontend/images/favicon.png') }}">
 
-    {{-- Bootstrap --}}
     <link rel="stylesheet"
           href="{{ asset('assets/frontend/css/bootstrap.min.css') }}">
 
-    {{-- Font Awesome --}}
     <link rel="stylesheet"
           href="{{ asset('assets/frontend/css/fontawesome.css') }}">
 
-    {{-- Main Frontend CSS --}}
     <link rel="stylesheet"
           href="{{ asset('assets/frontend/css/style.css') }}">
 
     <style>
-
-        /*
-        |--------------------------------------------------------------------------
-        | Error Page
-        |--------------------------------------------------------------------------
-        */
 
         body {
             margin: 0;
@@ -72,12 +63,6 @@
                 #f7f9fc;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Decorative Background
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-page::before {
             content: "";
             position: absolute;
@@ -100,12 +85,6 @@
             left: -100px;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Wrapper
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-wrapper {
             position: relative;
             z-index: 2;
@@ -118,12 +97,6 @@
             box-shadow:
                 0 20px 70px rgba(27, 54, 93, 0.10);
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Error Code
-        |--------------------------------------------------------------------------
-        */
 
         .senverse-error-code {
             margin: 0;
@@ -145,12 +118,6 @@
             opacity: 0.95;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Label
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-label {
             display: inline-flex;
             align-items: center;
@@ -171,12 +138,6 @@
             border-radius: 999px;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Title
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-title {
             margin-top: 30px;
             margin-bottom: 18px;
@@ -188,12 +149,6 @@
             color: #1b365d;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Description
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-description {
             max-width: 600px;
             margin: 0 auto 32px;
@@ -204,12 +159,6 @@
             color: #6b7280;
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Actions
-        |--------------------------------------------------------------------------
-        */
-
         .senverse-error-actions {
             display: flex;
             align-items: center;
@@ -218,7 +167,8 @@
             gap: 14px;
         }
 
-        .senverse-error-home {
+        .senverse-error-home,
+        .senverse-error-back {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -232,11 +182,12 @@
             font-size: 15px;
             font-weight: 600;
 
-            color: #ffffff;
-
-            background: #1b365d;
-
             transition: all 0.25s ease;
+        }
+
+        .senverse-error-home {
+            color: #ffffff;
+            background: #1b365d;
         }
 
         .senverse-error-home:hover {
@@ -248,25 +199,9 @@
         }
 
         .senverse-error-back {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-
-            min-height: 52px;
-            padding: 0 28px;
-
-            border-radius: 8px;
-            border: 1px solid #dde4ee;
-
-            font-size: 15px;
-            font-weight: 600;
-
             color: #1b365d;
-
             background: #ffffff;
-
-            transition: all 0.25s ease;
+            border: 1px solid #dde4ee;
         }
 
         .senverse-error-back:hover {
@@ -275,12 +210,6 @@
             background: #f4f7fc;
             transform: translateY(-2px);
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Logo
-        |--------------------------------------------------------------------------
-        */
 
         .senverse-error-logo {
             margin-bottom: 35px;
@@ -291,12 +220,6 @@
             max-width: 180px;
             max-height: 60px;
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Responsive
-        |--------------------------------------------------------------------------
-        */
 
         @media (max-width: 767px) {
 
@@ -343,58 +266,69 @@
 
             <div class="senverse-error-wrapper">
 
-                {{-- Logo --}}
                 <div class="senverse-error-logo">
-                    <a href="{{ $isVi ? route('vi.home') : route('en.home') }}">
+
+                    <a href="{{ $isVi ? '/vi' : '/' }}">
 
                         <img
                             src="{{ setting_media('logo') }}"
                             alt="Senverse">
 
                     </a>
+
                 </div>
 
-                {{-- Label --}}
                 <div class="senverse-error-label">
-                    <i class="fa-regular fa-circle-exclamation"></i>
+
+                    <i class="fa-regular fa-screwdriver-wrench"></i>
 
                     {{ $isVi
-                        ? 'Lỗi 404'
-                        : 'Error 404'
+                        ? 'Đang Bảo Trì'
+                        : 'Maintenance'
                     }}
+
                 </div>
 
-                {{-- Code --}}
                 <h1 class="senverse-error-code">
-                    404
+                    503
                 </h1>
 
-                {{-- Title --}}
                 <h2 class="senverse-error-title">
 
                     {{ $isVi
-                        ? 'Không Tìm Thấy Trang'
-                        : 'Page Not Found'
+                        ? 'Chúng Tôi Sẽ Sớm Quay Lại'
+                        : 'We’ll Be Back Soon'
                     }}
 
                 </h2>
 
-                {{-- Description --}}
                 <p class="senverse-error-description">
 
                     {{ $isVi
-                        ? 'Trang bạn đang tìm kiếm không tồn tại, đã được di chuyển hoặc đường dẫn không còn khả dụng.'
-                        : 'The page you are looking for may have been moved, deleted, or the URL may no longer be available.'
+                        ? 'Senverse hiện đang tạm thời bảo trì hoặc nâng cấp hệ thống. Vui lòng quay lại sau ít phút.'
+                        : 'Senverse is temporarily unavailable while we perform maintenance or system upgrades. Please check back shortly.'
                     }}
 
                 </p>
 
-                {{-- Actions --}}
                 <div class="senverse-error-actions">
 
                     <a
-                        href="{{ $isVi ? route('vi.home') : route('en.home') }}"
+                        href="javascript:location.reload()"
                         class="senverse-error-home"
+                    >
+                        <i class="fa-regular fa-rotate-right"></i>
+
+                        {{ $isVi
+                            ? 'Kiểm Tra Lại'
+                            : 'Check Again'
+                        }}
+
+                    </a>
+
+                    <a
+                        href="{{ $isVi ? '/vi' : '/' }}"
+                        class="senverse-error-back"
                     >
                         <i class="fa-regular fa-house"></i>
 
@@ -402,18 +336,7 @@
                             ? 'Về Trang Chủ'
                             : 'Back to Home'
                         }}
-                    </a>
 
-                    <a
-                        href="javascript:history.back()"
-                        class="senverse-error-back"
-                    >
-                        <i class="fa-regular fa-arrow-left"></i>
-
-                        {{ $isVi
-                            ? 'Quay Lại'
-                            : 'Go Back'
-                        }}
                     </a>
 
                 </div>

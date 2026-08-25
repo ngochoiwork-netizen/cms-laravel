@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
+use App\Services\SeoService;
 
 class BlogController extends Controller
 {
@@ -25,6 +26,15 @@ class BlogController extends Controller
             ->where('slug', $categorySlug)
             ->firstOrFail();
         $this->view['category'] = $category;
+
+        /*
+        |--------------------------------------------------------------------------
+        | SEO
+        |--------------------------------------------------------------------------
+        */
+
+        $this->view['seo'] = SeoService::make($category);
+
         $posts = Post::with([
             'translation',
             'thumbnail',
@@ -33,7 +43,7 @@ class BlogController extends Controller
             ->active()
             ->where('category_id', $category->id)
             ->orderByDesc('published_at')
-            ->paginate(2);
+            ->paginate(12);
         $this->view['posts'] = $posts;
         $breadcrumbs = [
             [
@@ -138,6 +148,14 @@ class BlogController extends Controller
             ->where('slug', $postSlug)
             ->firstOrFail();
         $this->view['post'] = $post;
+
+        /*
+        |--------------------------------------------------------------------------
+        | SEO
+        |--------------------------------------------------------------------------
+        */
+
+        $this->view['seo'] = SeoService::make($post);
 
         /*
         |--------------------------------------------------------------------------

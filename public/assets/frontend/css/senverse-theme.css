@@ -3571,21 +3571,28 @@ p.disc {
 @media (min-width: 1200px) {
 
     .header-one .header-wrapper-main {
-        height: 100px;
-        min-height: 100px;
+        height: 90px;
+        min-height: 90px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .header-one .logo-area {
         display: flex;
         align-items: center;
     }
 
     .header-one .logo-area img {
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 170px !important;
+        max-width: 170px !important;
+
         height: auto !important;
-        max-height: 70px !important;
+        max-height: 55px !important;
+
         object-fit: contain;
         display: block;
     }
-
 }
 
 
@@ -3647,7 +3654,7 @@ p.disc {
 }
 
 body.demo-software-company {
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 /*
