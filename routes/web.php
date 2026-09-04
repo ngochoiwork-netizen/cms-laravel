@@ -18,6 +18,7 @@ use App\Http\Controllers\Frontend\SolutionController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\PolicyController;
 require __DIR__.'/auth.php';
 
 /*
@@ -198,6 +199,10 @@ Route::prefix('admin')
 
         Route::post('/contact', [ContactController::class, 'submit'])
             ->name('contact.submit');
+        
+        // Policy pages: Page "policy" → section theo slug
+        Route::get('/policy/{slug}', [PolicyController::class, 'show'])
+            ->name('policy.show');
 
         Route::get('/solutions/{slug}', [SolutionController::class, 'show'])
             ->name('solutions.show');

@@ -13,7 +13,8 @@
         'website-design' => 'Website Design',
         'social-media' => 'Social Media',
         'local-boost' => 'Local Boost',
-        'al-reception' => 'Al Reception',
+        'gift-card' => 'Gift Card',
+        'ai-reception' => 'AI Reception',
         'about' => 'About Us',
         'landing' => 'Landing Page',
     ];

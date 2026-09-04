@@ -65,11 +65,11 @@
             {{-- Pricing Plans --}}
             @if (!empty($plans))
 
-                <div class="row g-5 mt--10">
+                <div class="row g-5 mt--10 justify-content-center">
 
                     @foreach ($plans as $plan)
 
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="{{ count($plans) === 2 ? 'col-xl-5' : 'col-xl-4' }} col-lg-6 col-md-6 col-12">
 
                             <!-- single pricing area start -->
                             <div class="pricing-wrapper-four {{ !empty($plan['active']) ? 'active' : '' }}">

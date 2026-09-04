@@ -34,8 +34,8 @@ class SolutionController extends Controller
             case 'social-media':
             case 'website-design':
             case 'local-boost':
-            case 'the-qua-tang':
-            case 'ai-resiption':
+            case 'gift-card':
+            case 'ai-reception':
                 return $this->growthServices($slug);
 
             default:
