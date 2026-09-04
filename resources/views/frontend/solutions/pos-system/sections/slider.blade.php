@@ -4,9 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="banner-content-two-style">
-
                     <div class="left-area-banner">
-
                         <h1 class="title">
                             {{ $slider?->title ?? 'Innovative IT Solutions Power Your Business' }}
 
@@ -18,28 +16,30 @@
                         <p class="disc">
                             {{ $slider?->description ?? 'we provide tailored technology solutions designed to Unique streamline operations, enhance security, and drive business growth. Whether you need cloud computing, cybersecurity, or custom software development.' }}
                         </p>
-
                         <div class="stars-main-wrapper">
                                 <div class="single-check">
-                                    <p><i class="fa-regular fa-check"></i> Appointments</p>
+                                    <p><i class="fa-regular fa-check"></i> Smart Appointments & Check-in </p>
                                 </div>
                                 <div class="single-check">
-                                    
-                                    <p><i class="fa-regular fa-check"></i> Payments</p>
+                                    <p><i class="fa-regular fa-check"></i> Technician & Turn Management </p>
                                 </div>
                                 <div class="single-check">
-                                    
-                                    <p> <i class="fa-regular fa-check"></i> CRM</p>
+                                    <p> <i class="fa-regular fa-check"></i> Payments & Customer Management </p>
+                                </div>
+                                <div class="single-check">
+                                    <p> <i class="fa-regular fa-check"></i> Payroll & Offline Mode </p>
+                                </div>
+                                <div class="single-check">
+                                    <p> <i class="fa-regular fa-check"></i> Report & SMS Marketing </p>
                                 </div>
                         </div>
-
                         @if ($slider?->button_text && $slider?->link)
                             <a href="{{ localized_url($slider->link) }}" class="rts-btn btn-primary">
                                 {{ $slider->button_text }}
                             </a>
                         @else
-                            <a href="{{ localized_route('about') }}" class="rts-btn btn-primary">
-                                Learn More
+                            <a href="{{ localized_route('contact') }}" class="rts-btn btn-primary">
+                                Book a Free Demo
                             </a>
                         @endif
 

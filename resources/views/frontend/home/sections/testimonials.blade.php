@@ -12,8 +12,8 @@
 
                         <h2 class="title rts-text-anime-style-1">
                             {{ app()->getLocale() === 'vi'
-                                ? 'Chủ Salon Đánh Giá Senverse Như Thế Nào?'
-                                : 'What Salon Owners Say About Senverse'
+                                ? 'Chủ Salon Nói Gì Về Senverse?'
+                                : 'What Salon Owners Say About Senverse?'
                             }}
                         </h2>
 

@@ -91,6 +91,12 @@
 
                                     </a>
 
+                                    @if (!empty($service['description']))
+                                        <p class="description">
+                                            {{ $service['description'] }}
+                                        </p>
+                                    @endif
+
                                 </h5>
 
                             </div>

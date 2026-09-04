@@ -12,7 +12,7 @@
 
             <div class="row align-items-center">
 
-                <div class="col-xl-4">
+                <div class="col-xl-3">
 
                     <div class="our-vision-left-content">
 
@@ -31,7 +31,7 @@
 
                 </div>
 
-                <div class="col-xl-8">
+                <div class="col-xl-9">
 
                     <div class="floating-div">
 

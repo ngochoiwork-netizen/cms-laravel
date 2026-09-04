@@ -4047,3 +4047,427 @@ h1.title {
     }
 
 }
+
+.banner-style-one-wrapper-inner {padding-top: 0px !important ;}
+
+/* Home - Why Choose Senverse */
+body.demo-software-company
+.why-senverse-section {
+    background: #f7f9fc;
+}
+
+/* Tiêu đề bên trái */
+body.demo-software-company
+.why-senverse-section
+.our-vision-left-content h2.title {
+    color: var(--senverse-primary);
+}
+
+/* Khung nội dung */
+body.demo-software-company
+.why-senverse-section
+.our-vision-right-content {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(27, 54, 93, 0.08);
+}
+
+/* Tiêu đề bên phải */
+body.demo-software-company
+.why-senverse-section
+.content-area h3.title {
+    color: var(--senverse-primary);
+}
+
+/* Mô tả */
+body.demo-software-company
+.why-senverse-section
+.content-area p.disc {
+    color: #667085;
+}
+
+/* Danh sách nổi bật */
+body.demo-software-company
+.why-senverse-section
+.single-check p {
+    color: #344054;
+}
+
+body.demo-software-company
+.why-senverse-section
+.single-check i {
+    color: var(--senverse-light);
+}
+
+/* CTA */
+body.demo-software-company
+.why-senverse-section
+.rts-btn.btn-primary {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    color: #ffffff;
+}
+
+body.demo-software-company
+.why-senverse-section
+.rts-btn.btn-primary:hover {
+    background: var(--senverse-light);
+    border-color: var(--senverse-light);
+}
+
+/* Tablet dọc */
+/* iPad và tablet ở chế độ dọc */
+@media only screen
+and (min-width: 768px)
+and (max-width: 1199px)
+and (orientation: portrait) {
+    .header-one .header-wrapper-main {
+        min-height: 90px !important;
+        height: 90px !important;
+        padding: 0 !important;
+    }
+
+    .header-one .logo-area {
+        width: auto !important;
+        max-width: 240px !important;
+        flex-shrink: 0;
+    }
+
+    .header-one .logo-area a {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-one .logo-area img {
+        display: block;
+        width: 230px !important;
+        max-width: 230px !important;
+        height: auto !important;
+        max-height: 65px !important;
+        object-fit: contain;
+    }
+
+    .banner-swiper-main-wrapper-one,
+    .banner-swiper-main-wrapper-one .mySwiper-banner-one,
+    .banner-swiper-main-wrapper-one .swiper-wrapper,
+    .banner-swiper-main-wrapper-one .swiper-slide {
+        min-height: 1100px !important;
+        height: 1100px !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .rts-banner-area-one.two.bg_image {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        height: 1100px !important;
+        min-height: 1100px !important;
+
+        padding: 60px 35px 500px !important;
+
+        background-color: #0d1d32 !important;
+        background-size: 125% auto !important;
+        background-position: right bottom !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner {
+        position: relative !important;
+        z-index: 5 !important;
+
+        width: 100% !important;
+        max-width: 650px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .pre-title {
+        display: inline-block !important;
+        margin-bottom: 14px !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .title {
+        width: 100% !important;
+        max-width: 600px !important;
+        margin: 0 auto 18px !important;
+
+        font-size: 46px !important;
+        line-height: 1.1 !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .disc {
+        width: 100% !important;
+        max-width: 580px !important;
+        margin: 0 auto 25px !important;
+
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .button-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .banner-swiper-main-wrapper-one .swiper-button-next,
+    .banner-swiper-main-wrapper-one .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .banner-swiper-main-wrapper-one
+    .rts-banner-area-one.two.bg_image {
+        min-height: 680px;
+        padding: 45px 18px 390px;
+
+        background-color: #0d1d32;
+
+        /* Chỉ lấy khoảng 45–50% bên phải */
+        background-size: 210% auto;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .title {
+        max-width: 340px;
+        margin: 0 auto 15px;
+        font-size: 30px;
+        line-height: 1.08;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .disc {
+        max-width: 330px;
+        margin: 0 auto 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .button-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-swiper-main-wrapper-one .swiper-button-next,
+    .banner-swiper-main-wrapper-one .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .banner-swiper-main-wrapper-one
+    .rts-banner-area-one.two.bg_image {
+        min-height: 540px;
+        
+        background-size: 730px auto;
+        background-position: 100% bottom;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .title {
+        font-size: 30px;
+    }
+
+    .banner-swiper-main-wrapper-one
+    .banner-style-one-wrapper-inner .disc {
+        font-size: 15px;
+    }
+}
+
+/* Logo trong menu sidebar */
+#side-bar .logo img,
+#side-bar .logo-area img,
+.side-bar .logo img,
+.side-bar .logo-area img {
+    display: block;
+    width: 180px !important;
+    max-width: 180px !important;
+    height: auto !important;
+    max-height: 60px !important;
+    object-fit: contain;
+}
+
+#side-bar .logo,
+#side-bar .logo-area,
+.side-bar .logo,
+.side-bar .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto !important;
+    max-width: 180px !important;
+}
+
+#side-bar .logo img,
+#side-bar .logo-area img,
+.side-bar .logo img,
+.side-bar .logo-area img {
+    width: 160px !important;
+    max-width: 160px !important;
+    max-height: 54px !important;
+}
+
+/* =========================================================
+   HOME HERO – RESPONSIVE LAPTOP
+========================================================= */
+
+body.demo-software-company .rts-banner-area-one {
+    height: min(910px, calc(100vh - 100px));
+    min-height: 640px;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+/* Header đã nằm riêng phía trên nên không cần đẩy nội dung 120px */
+body.demo-software-company .banner-style-one-wrapper-inner {
+    max-width: 630px;
+    padding-top: 0;
+}
+
+/* Mũi tên không đè lên nội dung */
+body.demo-software-company
+.mySwiper-banner-one
+.swiper-button-prev {
+    left: 24px;
+}
+
+body.demo-software-company
+.mySwiper-banner-one
+.swiper-button-next {
+    right: 24px;
+}
+
+
+/* =========================================================
+   LAPTOP 1200px – 1600px
+========================================================= */
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+
+    body.demo-software-company .rts-banner-area-one {
+        height: calc(100vh - 90px);
+        min-height: 620px;
+        max-height: 780px;
+        background-position: 58% center;
+    }
+
+    body.demo-software-company .banner-style-one-wrapper-inner {
+        max-width: 560px;
+        padding-top: 0;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    .pre-title {
+        font-size: 15px;
+        padding: 7px 15px;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    .title {
+        max-width: 560px;
+        margin-top: 22px;
+        font-size: 52px;
+        line-height: 1.08;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    p.disc {
+        max-width: 560px;
+        margin-bottom: 30px;
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    .rts-btn {
+        padding: 15px 30px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP CÓ CHIỀU CAO THẤP – 1366 × 768
+========================================================= */
+
+@media only screen and (min-width: 992px) and (max-height: 800px) {
+
+    body.demo-software-company .rts-banner-area-one {
+        height: calc(100vh - 80px);
+        min-height: 580px;
+        max-height: 690px;
+        background-position: 58% center;
+    }
+
+    body.demo-software-company .banner-style-one-wrapper-inner {
+        max-width: 520px;
+        padding-top: 0;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    .title {
+        max-width: 520px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        font-size: 46px;
+        line-height: 1.08;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    p.disc {
+        max-width: 520px;
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    body.demo-software-company
+    .banner-style-one-wrapper-inner
+    .rts-btn {
+        padding: 13px 26px;
+    }
+}
+
+/* Viền focus cho toàn bộ website Senverse */
+body.demo-software-company :focus-visible {
+    outline: 3px solid #1b365d;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px #fff;
+}
+
+/* Mở dropdown trong header bằng bàn phím */
+.header-one li.has-dropdown:focus-within > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scaleY(1);
+    top: 100%;
+}

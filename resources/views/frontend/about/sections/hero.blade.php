@@ -16,7 +16,7 @@
                             </li>
                             <li class="active">
                                 <a href="localized_route('about')">
-                                    {{ $page->title ?? 'About' }}
+                                    {{ $page->title ?? 'About Us' }}
                                 </a>
                             </li>
                         </ul>

@@ -13,7 +13,7 @@
                     <h2 class="title rts-text-anime-style-1">
 
                         {{ app()->getLocale() === 'vi'
-                            ? 'Kiến Thức & Tài Nguyên'
+                            ? 'Kiến Thức & Kinh Nghiệm'
                             : 'Insights & Resources'
                         }}
 
@@ -22,8 +22,8 @@
                     <p class="disc">
 
                         {{ app()->getLocale() === 'vi'
-                            ? 'Cập nhật xu hướng, kiến thức và những giải pháp mới nhất dành cho chủ salon.'
-                            : 'Stay updated with the latest trends, tips, and best practices for salon management.'
+                            ? 'Khám phá xu hướng, kinh nghiệm quản lý và những giải pháp giúp salon vận hành hiệu quả, chăm sóc khách hàng tốt hơn và tăng trưởng bền vững'
+                            : 'Explore the latest trends, management tips, and practical solutions to operate more efficiently, improve customer experiences, and grow your salon.'
                         }}
 
                     </p>

@@ -10,6 +10,9 @@
     {{-- benefits --}}
     @include('frontend.solutions.growth-services.sections.benefits')
 
+    {{-- Showcase --}}
+    @include('frontend.solutions.growth-services.sections.showcase')
+
     {{-- Service --}}
     @include('frontend.solutions.growth-services.sections.service')
 

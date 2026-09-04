@@ -13,11 +13,9 @@ use App\Services\SeoService;
 use Illuminate\Support\Facades\Mail;
 
 
-
 class ContactController extends Controller
 {
     protected array $view = [];
-
     public function index()
     {
         /*

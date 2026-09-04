@@ -15,7 +15,6 @@
 
                     <!-- rts blog details wrapper area start -->
                     <div class="rts-blog-detials-area-start">
-
                         {{-- Featured Image --}}
                         @if ($post->banner)
                             <div class="thumbnail-top">
@@ -24,9 +23,7 @@
                                     alt="{{ $post->banner->alt_text ?: $post->title }}"
                                 >
                             </div>
-
                         @elseif ($post->thumbnail)
-
                             <div class="thumbnail-top">
                                 <img
                                     src="{{ $post->thumbnail->url }}"
@@ -35,12 +32,9 @@
                             </div>
                         @endif
 
-
                         <div class="inner-content-blog-details">
-
                             {{-- Post Meta --}}
                                 <div class="top-area">
-
                                     @if ($category->name)
                                         <span>
                                            

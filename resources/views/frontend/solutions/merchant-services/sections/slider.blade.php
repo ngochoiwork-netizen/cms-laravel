@@ -20,28 +20,24 @@
                         </p>
 
                         <div class="stars-main-wrapper">
-
                             <div class="single-check">
                                 <p>
                                     <i class="fa-regular fa-check"></i>
                                     No Hidden Fees
                                 </p>
                             </div>
-
                             <div class="single-check">
                                 <p>
                                     <i class="fa-regular fa-check"></i>
-                                    Secure Payments
+                                    Secure Payment Processing
                                 </p>
                             </div>
-
                             <div class="single-check">
                                 <p>
                                     <i class="fa-regular fa-check"></i>
-                                    POS Integrated
+                                    Seamless POS Integration
                                 </p>
                             </div>
-
                         </div>
 
                         @if ($slider?->button_text && $slider?->link)

@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="header-wrapper-main">
-
                     {{-- Logo --}}
                     <div class="logo-area">
                         <a href="{{ localized_route('home') }}">
@@ -13,7 +12,6 @@
                             >
                         </a>
                     </div>
- 
                     {{-- Menu --}}
                     <div class="nav-area">
                         <ul>
@@ -160,19 +158,28 @@
                         </a>
 
 
-                        <div class="menu-btn-toggle white">
+                        <button
+                            type="button"
+                            class="menu-btn-toggle white"
+                            aria-label="{{ app()->getLocale() === 'vi'
+                                ? 'Mở menu điều hướng'
+                                : 'Open navigation menu' }}"
+                            aria-controls="side-bar"
+                        >
                             <svg
                                 width="20"
                                 height="16"
                                 viewBox="0 0 20 16"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                                focusable="false"
                             >
                                 <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
                                 <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
                                 <rect width="20" height="2" fill="#1F1F25"></rect>
                             </svg>
-                        </div>
+                        </button>
 
                     </div>
 

@@ -263,6 +263,7 @@ class SolutionController extends Controller
      */
     private function growthServices(string $slug)
     {
+
         // Load dữ liệu riêng của Growth Services tại đây
         $sliders = Slider::with([
             'image',
@@ -308,6 +309,38 @@ class SolutionController extends Controller
             ->first();
 
         $this->view['serviceSection'] = $serviceSection;
+
+        $showcaseSection = $page->sections
+            ->where('key', 'showcase')
+            ->where('is_active', true)
+            ->first();
+        //dd($showcaseSection);
+        $showcasePosts = collect();
+
+        if ($showcaseSection) {
+            
+            // Lấy ID category theo slug của trang hiện tại
+            $categoryId = Category::active()
+            ->where('slug', $slug)
+            ->value('id');
+
+            $showcasePosts = Post::with([
+                'translations',
+                'thumbnail',
+                'category.translations',
+            ])
+                ->active()
+                ->where('category_id',$categoryId)
+                ->orderBy('sort_order')
+                ->orderByDesc('id')
+                ->take(12)
+                ->get();
+        }
+        //dd($showcasePosts);
+        $this->view['showcaseSection'] = $showcaseSection;
+        $this->view['showcasePosts'] = $showcasePosts;
+
+      
 
         $workflowSection = $page?->sections
             ->where('key', 'workflow')
