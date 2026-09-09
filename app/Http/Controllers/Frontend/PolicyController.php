@@ -14,6 +14,7 @@ class PolicyController extends Controller
     protected array $view = [];
     public function show(string $slug)
     {
+        
         $page = Page::with([
             'sections.translations',
             'sections.image',
@@ -29,9 +30,9 @@ class PolicyController extends Controller
         | Chính sách đang xem
         |--------------------------------------------------------------------------
         */
-
+        $sectionKey = str_replace('-', '_', $slug);
         $policySection = $page->sections
-            ->where('key', $slug)
+            ->where('key', $sectionKey)
             ->where('is_active', true)
             ->first();
 

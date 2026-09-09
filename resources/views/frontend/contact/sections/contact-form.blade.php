@@ -86,7 +86,7 @@
                                     : 'Contact our customer support team.' }}
                             </p>
 
-                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', setting('phone')) }}">
+                            <a href="tel:8887903968}}">
                                 {{ setting('phone') }}
                             </a>
                         </div>
@@ -290,7 +290,7 @@
                             {{ $isVi ? 'Xem' : 'View our' }}
 
                             <a
-                                href="{{ localized_url('/policy/privacy_policy') }}"
+                                href="{{ localized_url('/policy/privacy-policy') }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -302,7 +302,7 @@
                             {{ $isVi ? 'và' : 'and' }}
 
                             <a
-                                href="{{ localized_url('/policy/sms_terms') }}"
+                                href="{{ localized_url('/policy/sms-terms') }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

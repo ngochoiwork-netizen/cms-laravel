@@ -58,7 +58,7 @@
 
                             <i class="fa-light fa-phone"></i>
 
-                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', setting('phone')) }}">
+                            <a href="tel:8887903968">
                                 {{ setting('phone') }}
                             </a>
 
