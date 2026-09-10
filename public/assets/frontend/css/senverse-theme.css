@@ -4471,3 +4471,74 @@ body.demo-software-company :focus-visible {
     transform: translateY(0) scaleY(1);
     top: 100%;
 }
+
+/* Home - Workflow item headings */
+body.demo-software-company
+.working-process-three-main
+.working-process-wrapper-three
+h3.title {
+    margin-bottom: 20px;
+
+    color: #000000;
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+
+    transition: color 0.3s ease;
+}
+
+body.demo-software-company
+.working-process-three-main
+.working-process-wrapper-three:hover
+h3.title {
+    color: var(--color-primary);
+}
+
+@media only screen and (max-width: 767px) {
+    body.demo-software-company
+    .working-process-three-main
+    .working-process-wrapper-three
+    h3.title {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+    }
+}
+
+/* Home - Resource card headings */
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.inner-content-blog
+h3.title {
+    margin-bottom: 20px;
+
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company
+.rts-blog-area
+.single-blog-style-one
+.inner-content-blog
+h3.title a {
+    color: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    body.demo-software-company
+    .rts-blog-area
+    .single-blog-style-one
+    .inner-content-blog
+    h3.title {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+    }
+}
+
+.footer-wized-wrapper .single h3.title {
+    margin-top: 0;
+    font-size: 20px !important;
+    line-height: 1.4;
+    font-weight: 600;
+}

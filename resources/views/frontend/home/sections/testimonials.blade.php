@@ -92,9 +92,9 @@
                                                 <div class="bottom">
 
                              
-                                                        <h5 class="title">
+                                                        <h3 class="title">
                                                            {{ $testimonial->title }}
-                                                        </h5>
+                                                        </h3>
 
     
 

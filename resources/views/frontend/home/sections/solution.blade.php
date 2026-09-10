@@ -6,7 +6,7 @@
     @endphp
 
     <!-- rts product area start -->
-    <div class="rts-product-area bg_dark rts-section-gap">
+    <div class="rts-product-area bg_dark rts-section-gap" id="rts-product-area">
 
         <div class="container">
 
@@ -117,14 +117,9 @@
                                 @if (!empty($product['image']))
 
                                     <div class="image-area">
-
                                         <img
-                                            src="{{ asset(
-                                                'assets/frontend/images/project/' .
-                                                $product['image']
-                                            ) }}"
-                                            width="563"
-                                            alt="{{ $product['title'] ?? '' }}"
+                                            src="{{ asset('assets/frontend/images/project/' . $product['image'] ) }}"width="563"
+                                           alt="{{ $product['image_alt'] ?? $product['title'] ?? '' }}"
                                         >
 
                                     </div>

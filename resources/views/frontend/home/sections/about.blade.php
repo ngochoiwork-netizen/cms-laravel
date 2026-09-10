@@ -56,7 +56,7 @@
                                     @foreach ($aboutData['features'] as $feature)
 
                                         <li>
-                                            <a href="#">
+                                            <a href="#rts-product-area">
                                                 {{ $feature }}
                                             </a>
                                         </li>

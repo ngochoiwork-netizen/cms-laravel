@@ -11,21 +11,17 @@
                 <div class="title-center-wrapper">
 
                     <h2 class="title rts-text-anime-style-1">
-
                         {{ app()->getLocale() === 'vi'
-                            ? 'Kiến Thức & Kinh Nghiệm'
-                            : 'Insights & Resources'
+                            ? 'Kiến Thức & Tài Nguyên Quản Lý Tiệm Nail'
+                            : 'Nail Salon Management Insights & Resources'
                         }}
-
                     </h2>
 
                     <p class="disc">
-
                         {{ app()->getLocale() === 'vi'
-                            ? 'Khám phá xu hướng, kinh nghiệm quản lý và những giải pháp giúp salon vận hành hiệu quả, chăm sóc khách hàng tốt hơn và tăng trưởng bền vững'
-                            : 'Explore the latest trends, management tips, and practical solutions to operate more efficiently, improve customer experiences, and grow your salon.'
+                            ? 'Khám phá các hướng dẫn thực tế về vận hành tiệm, hệ thống POS, thanh toán, trải nghiệm khách hàng và marketing để hỗ trợ những quyết định kinh doanh phù hợp hơn.'
+                            : 'Explore practical guides on salon operations, POS systems, payments, client experience, and marketing to help you make informed business decisions.'
                         }}
-
                     </p>
 
                 </div>
@@ -75,18 +71,14 @@
 
                             @endif
 
-                            <a href="{{ localized_route('resources.show', [
-                                            'categorySlug' => $post->category->slug,
-                                            'postSlug' => $post->slug,
-                                        ]) }}">
-
-                                <h5 class="title">
-
+                            <h3 class="title">
+                                <a href="{{ localized_route('resources.show', [
+                                    'categorySlug' => $post->category->slug,
+                                    'postSlug' => $post->slug,
+                                ]) }}">
                                     {{ $post->title }}
-
-                                </h5>
-
-                            </a>
+                                </a>
+                            </h3>
 
                             <a href="{{ localized_route('resources.show', [
                                             'categorySlug' => $post->category->slug,

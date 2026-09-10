@@ -204,6 +204,14 @@ Route::prefix('admin')
         Route::get('/policy/{slug}', [PolicyController::class, 'show'])
             ->name('policy.show');
 
+        Route::view(
+            '/solutions/ai-reception',
+            'frontend.coming-soon'
+        )->name('ai-reception');
+
+        Route::get('/solutions/{slug}', [SolutionController::class, 'show'])
+            ->name('solutions.show');
+
         Route::get('/solutions/{slug}', [SolutionController::class, 'show'])
             ->name('solutions.show');
 

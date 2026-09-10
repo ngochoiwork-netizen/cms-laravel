@@ -112,9 +112,9 @@
 
                         <div class="single">
 
-                            <h6 class="title">
+                            <h3 class="title">
                                 {{ $footerCompany->title ?? 'Company' }}
-                            </h6>
+                            </h3>
 
                             @if (!empty($companyItems))
 
@@ -162,9 +162,9 @@
 
                         <div class="single">
 
-                            <h6 class="title">
+                            <h3 class="title">
                                 {{ $footerService->title ?? 'Services' }}
-                            </h6>
+                            </h3>
 
                             @if (!empty($serviceItems))
 
@@ -212,9 +212,9 @@
 
                         <div class="single">
 
-                            <h6 class="title">
+                            <h3 class="title">
                                 {{ $footerPolicy->title ?? 'Policy' }}
-                            </h6>
+                            </h3>
 
                             @if (!empty($policyItems))
 
@@ -251,9 +251,9 @@
 
                     <div class="single">
 
-                        <h6 class="title">
+                        <h3 class="title">
                             Social Media
-                        </h6>
+                        </h3>
 
                         <ul>
 

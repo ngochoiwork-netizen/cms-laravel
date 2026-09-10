@@ -27,9 +27,15 @@
                                             @endif
 
                                             @if ($slider->title)
-                                                <h1 class="title rts-text-anime-style-1">
-                                                    {{ $slider->title }}
-                                                </h1>
+                                                @if ($loop->first)
+                                                    <h1 class="title rts-text-anime-style-1">
+                                                        {{ $slider->title }}
+                                                    </h1>
+                                                @else
+                                                    <h2 class="title rts-text-anime-style-1">
+                                                        {{ $slider->title }}
+                                                    </h2>
+                                                @endif
                                             @endif
 
                                             @if ($slider->description)

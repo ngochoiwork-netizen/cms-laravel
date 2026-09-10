@@ -26,7 +26,7 @@
 
                         <div class="accordion-item">
 
-                            <h2 class="accordion-header"
+                            <h3 class="accordion-header"
                                 id="heading{{ $faq->id }}">
 
                                 <button
@@ -44,7 +44,7 @@
 
                                 </button>
 
-                            </h2>
+                            </h3>
 
                             <div
                                 id="collapse{{ $faq->id }}"

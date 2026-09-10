@@ -83,21 +83,19 @@
 
                                 </div>
 
-                                <h5 class="title">
+                                @if (!empty($service['title']))
+                                    <h3 class="title">
+                                        <a href="{{ localized_url($service['link'] ?? null) }}">
+                                            {{ $service['title'] }}
+                                        </a>
+                                    </h3>
+                                @endif
 
-                                    <a href="{{ localized_url($service['link'] ?? null) }}">
-
-                                        {{ $service['title'] ?? '' }}
-
-                                    </a>
-
-                                    @if (!empty($service['description']))
-                                        <p class="description">
-                                            {{ $service['description'] }}
-                                        </p>
-                                    @endif
-
-                                </h5>
+                                @if (!empty($service['description']))
+                                    <p class="description">
+                                        {{ $service['description'] }}
+                                    </p>
+                                @endif
 
                             </div>
 

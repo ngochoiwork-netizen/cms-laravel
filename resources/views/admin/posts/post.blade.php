@@ -56,10 +56,10 @@
                 $vi = $post->translations
                     ->firstWhere('locale', 'vi');
 
-                $categoryName = optional(optional($post->category)
-                    ->translations
-                    ->firstWhere('locale', 'vi'))
-                    ->name;
+                $categoryName = $post->category
+                    ? $post->category->translations
+                        ->firstWhere('locale', 'vi')?->name
+                    : null;
 
             @endphp
 
@@ -102,7 +102,17 @@
 
                 <td>
 
-                    {{ $categoryName ?? '-' }}
+                    @if($categoryName)
+
+                        {{ $categoryName }}
+
+                    @else
+
+                        <span class="text-muted">
+                            Chưa có danh mục
+                        </span>
+
+                    @endif
 
                 </td>
 

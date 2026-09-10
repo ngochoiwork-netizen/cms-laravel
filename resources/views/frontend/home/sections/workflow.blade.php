@@ -57,17 +57,17 @@
 
                                         <div class="working-process-wrapper-three">
 
-                                            <h5 class="title">
+                                            @if (!empty($step['title']))
+                                                <h3 class="title">
+                                                    {{ $step['title'] }}
+                                                </h3>
+                                            @endif
 
-                                                {{ $step['title'] ?? '' }}
-
-                                            </h5>
-
-                                            <p class="disc">
-
-                                                {{ $step['description'] ?? '' }}
-
-                                            </p>
+                                            @if (!empty($step['description']))
+                                                <p class="disc">
+                                                    {{ $step['description'] }}
+                                                </p>
+                                            @endif
 
                                         </div>
 

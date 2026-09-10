@@ -19,9 +19,9 @@
                         <div class="title-left-wrapper">
 
 
-                            @if ($whySection->title)
+                            @if ($whySection->subtitle)
                                 <h2 class="title rts-text-anime-style-1">
-                                     {{ $whySection->subtitle }}
+                                    {{ $whySection->subtitle }}
                                 </h2>
                             @endif
 
@@ -51,15 +51,13 @@
 
                             <div class="content-area">
 
-                                <div class="title-left-wrapper">
-
-                                    <h3 class="title rts-text-anime-style-1">
-
-                                        {{ $whySection->title }}
-
-                                    </h3>
-
-                                </div>
+                                @if ($whySection->title)
+                                    <div class="title-left-wrapper">
+                                        <h3 class="title rts-text-anime-style-1">
+                                            {{ $whySection->title }}
+                                        </h3>
+                                    </div>
+                                @endif
 
                                 @if ($whySection->content)
 
