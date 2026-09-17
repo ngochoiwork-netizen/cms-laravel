@@ -173,7 +173,17 @@ class PageController extends Controller
         foreach (['vi', 'en'] as $locale) {
             $data = $request->input($locale);
 
-            if (!$data || empty($data['title'])) {
+            if (!$data) {
+                continue;
+            }
+
+            $existingTranslation = $page->translations()
+                ->where('locale', $locale)
+                ->first();
+
+            $title = $data['title'] ?? $existingTranslation?->title;
+
+            if (blank($title)) {
                 continue;
             }
 
@@ -183,7 +193,7 @@ class PageController extends Controller
                     'locale' => $locale,
                 ],
                 [
-                    'title' => $data['title'] ?? null,
+                    'title' => $title,
                     'subtitle' => $data['subtitle'] ?? null,
                     'excerpt' => $data['excerpt'] ?? null,
                     'content' => $data['content'] ?? null,

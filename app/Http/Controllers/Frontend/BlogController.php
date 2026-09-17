@@ -204,9 +204,7 @@ class BlogController extends Controller
             'category.translation',
         ])
             ->published()
-            ->whereHas('category.parent', function ($query) {
-                $query->where('slug', 'resource');
-            })
+            ->where('category_id', $category->id)
             ->where('id', '!=', $post->id)
             ->orderByDesc('published_at')
             ->limit(3)

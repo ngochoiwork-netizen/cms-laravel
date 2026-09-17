@@ -1,4 +1,24 @@
 <!-- banner area start two -->
+ @php
+    $isVietnamese = app()->getLocale() === 'vi';
+
+    $heroBenefits = $isVietnamese
+        ? [
+            'Quản lý lịch hẹn và check-in',
+            'Quản lý kỹ thuật viên và lượt khách',
+            'Thanh toán và quản lý khách hàng',
+            'Tính lương và chế độ ngoại tuyến',
+            'Báo cáo và SMS Marketing',
+        ]
+        : [
+            'Smart Appointments & Check-In',
+            'Technician & Turn Management',
+            'Payments & Customer Management',
+            'Payroll & Offline Mode',
+            'Reports & SMS Marketing',
+        ];
+@endphp
+
 <div class="banner-area-start banner-two-h rts-section-gap">
     <div class="container">
         <div class="row">
@@ -6,40 +26,50 @@
                 <div class="banner-content-two-style">
                     <div class="left-area-banner">
                         <h1 class="title">
-                            {{ $slider?->title ?? 'Innovative IT Solutions Power Your Business' }}
+                            {{ $slider?->title
+                                ?? ($isVietnamese
+                                    ? 'Quản lý tiệm nail thông minh với Senverse POS'
+                                    : 'Run Your Nail Salon Smarter With Senverse POS System')
+                            }}
 
                             <span>
-                                <img src="{{ asset('frontend/assets/images/banner/05.png') }}" alt="">
+                                <img
+                                    src="{{ asset('frontend/assets/images/banner/05.png') }}"
+                                    alt=""
+                                >
                             </span>
                         </h1>
 
                         <p class="disc">
-                            {{ $slider?->description ?? 'we provide tailored technology solutions designed to Unique streamline operations, enhance security, and drive business growth. Whether you need cloud computing, cybersecurity, or custom software development.' }}
+                            {{ $slider?->description
+                                ?? ($isVietnamese
+                                    ? 'Senverse là hệ thống POS giúp chủ tiệm nail quản lý lịch hẹn, check-in, thanh toán, kỹ thuật viên, khách hàng, báo cáo và hoạt động liên lạc trong một quy trình kết nối.'
+                                    : 'Senverse is a POS system for nail salon owners to manage appointments, check-ins, payments, technicians, customers, reports, and communication in one connected workflow.')
+                            }}
                         </p>
                         <div class="stars-main-wrapper">
+                            @foreach ($heroBenefits as $benefit)
                                 <div class="single-check">
-                                    <p><i class="fa-regular fa-check"></i> Smart Appointments & Check-in </p>
+                                    <p>
+                                        <i class="fa-regular fa-check"></i>
+                                        {{ $benefit }}
+                                    </p>
                                 </div>
-                                <div class="single-check">
-                                    <p><i class="fa-regular fa-check"></i> Technician & Turn Management </p>
-                                </div>
-                                <div class="single-check">
-                                    <p> <i class="fa-regular fa-check"></i> Payments & Customer Management </p>
-                                </div>
-                                <div class="single-check">
-                                    <p> <i class="fa-regular fa-check"></i> Payroll & Offline Mode </p>
-                                </div>
-                                <div class="single-check">
-                                    <p> <i class="fa-regular fa-check"></i> Report & SMS Marketing </p>
-                                </div>
+                            @endforeach
                         </div>
                         @if ($slider?->button_text && $slider?->link)
-                            <a href="{{ localized_url($slider->link) }}" class="rts-btn btn-primary">
+                            <a
+                                href="{{ localized_url($slider->link) }}"
+                                class="rts-btn btn-primary"
+                            >
                                 {{ $slider->button_text }}
                             </a>
                         @else
-                            <a href="{{ localized_route('contact') }}" class="rts-btn btn-primary">
-                                Book a Free Demo
+                            <a
+                                href="{{ localized_route('contact') }}"
+                                class="rts-btn btn-primary"
+                            >
+                                {{ $isVietnamese ? 'Đặt lịch Demo' : 'Book a Demo' }}
                             </a>
                         @endif
 
@@ -50,10 +80,19 @@
                         @if ($slider?->image)
                             <img
                                 src="{{ asset('storage/' . $slider->image->file_path) }}"
-                                alt="{{ $slider->title ?? '' }}"
+                                alt="{{ $isVietnamese
+                                    ? 'Hệ thống Senverse POS với màn hình quản lý và thiết bị thanh toán cho tiệm nail'
+                                    : 'Senverse nail salon POS system with management screen and payment devices'
+                                }}"
                             >
                         @else
-                            <img src="{{ asset('frontend/assets/images/banner/02.webp') }}" alt="">
+                            <img
+                                src="{{ asset('frontend/assets/images/banner/02.webp') }}"
+                                alt="{{ $isVietnamese
+                                    ? 'Hệ thống Senverse POS dành cho tiệm nail'
+                                    : 'Senverse POS system for nail salon management'
+                                }}"
+                            >
                         @endif
 
                         <div class="circle-animation">
@@ -87,12 +126,15 @@
 
                         <div class="top">
 
-                            <h2 class="title">
-                               ALL-IN-ONE
-                            </h2>
+                            <div class="title h2">
+                                ALL-IN-ONE
+                            </div>
 
                             <span class="info">
-                                Salon Management Platform
+                                {{ $isVietnamese
+                                    ? 'Nền tảng quản lý tiệm nail'
+                                    : 'Nail Salon Management Platform'
+                                }}
                             </span>
 
                         </div>
@@ -100,7 +142,11 @@
                         <div class="bottom-area">
 
                             <p>
-                                {{ $slider?->subtitle ?? 'we provide tailored technology solutions designed to Unique streamline operations, enhance security, and drive business growth. Whether you need cloud computing, cybersecurity, or custom software development.' }}
+                                {{ $slider?->subtitle
+                                    ?? ($isVietnamese
+                                        ? 'Một nền tảng kết nối cho hoạt động quản lý tiệm nail hằng ngày.'
+                                        : 'One connected platform for daily nail salon management.')
+                                }}
                             </p>
 
                             <a href="#" class="radious-btn">

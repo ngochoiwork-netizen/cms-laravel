@@ -1433,7 +1433,7 @@ body.demo-software-company
 .banner-area-start.banner-two-h
 .right-top-area
 .top
-h2.title {
+.title {
     color: var(--senverse-primary);
 }
 
@@ -4541,4 +4541,24 @@ h3.title a {
     font-size: 20px !important;
     line-height: 1.4;
     font-weight: 600;
+}
+
+.product-wrapper .inner .left-content ul:not(.tags) li::before {
+    content: "\2713";
+    flex: 0 0 auto;
+    color: #8fb0ee;
+    font-weight: 700;
+}
+
+.recent-post-single .recent-post-title {
+    margin: 0;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+}
+
+.recent-post-single .recent-post-title a {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
 }

@@ -26,10 +26,10 @@
         ? 'vi_VN'
         : 'en_US';
 
-    $ogImage = null;
+    $ogImage = $seo['og_image'] ?? null;
 
-    if (!empty($seo['og_image'])) {
-        $ogImage = $seo['og_image']->url ?? null;
+    if (is_object($ogImage)) {
+        $ogImage = $ogImage->url ?? null;
     }
 @endphp
 
@@ -80,11 +80,11 @@
 
 @if ($ogImage)
     <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:secure_url" content="{{ $ogImage }}">
+    <meta property="og:image:alt" content="{{ $ogTitle }}">
 @endif
 
-{{-- Twitter --}}
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title" content="{{ $ogTitle }}">
 
 @if ($ogDescription)
@@ -93,4 +93,5 @@
 
 @if ($ogImage)
     <meta name="twitter:image" content="{{ $ogImage }}">
+    <meta name="twitter:image:alt" content="{{ $ogTitle }}">
 @endif

@@ -1,100 +1,93 @@
-<div class="sticky-top">
-
-    {{-- Search --}}
-
+<aside class="sticky-top" aria-label="Article sidebar">
 
     {{-- Categories --}}
-    <div class="rts-single-wized Categories">
-        <div class="wized-header">
-            <h5 class="title">
-                Categories
-            </h5>
-        </div>
+    @if ($categories->isNotEmpty())
+        <section class="rts-single-wized Categories">
+            <div class="wized-header">
+                <h2 class="title">
+                    Categories
+                </h2>
+            </div>
 
-        <div class="wized-body">
-
-            @foreach ($categories as $item)
-
-                <ul class="single-categories">
-                    <li>
-                        <a href="{{ localized_route('resources.category', [
-                                    'categorySlug' => $item->slug
+            <div class="wized-body">
+                <nav aria-label="Resource categories">
+                    <ul class="single-categories">
+                        @foreach ($categories as $item)
+                            <li>
+                                <a href="{{ localized_route('resources.category', [
+                                    'categorySlug' => $item->slug,
                                 ]) }}">
-                                                        {{ $item->name }}
+                                    {{ $item->name }}
+                                    <i class="far fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    @endif
 
-                                                        <i class="far fa-long-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+    {{-- Recent Posts --}}
+    @if ($recentPosts->isNotEmpty())
+        <section class="rts-single-wized Recent-post">
+            <div class="wized-header">
+                <h2 class="title">
+                    Recent Posts
+                </h2>
+            </div>
 
-                                        @endforeach
+            <div class="wized-body">
+                @foreach ($recentPosts as $recentPost)
+                    <article class="recent-post-single">
 
-                                    </div>
+                        @if ($recentPost->thumbnail)
+                            <div class="thumbnail">
+                                <a
+                                    href="{{ localized_route('resources.show', [
+                                        'categorySlug' => $recentPost->category->slug,
+                                        'postSlug' => $recentPost->slug,
+                                    ]) }}"
+                                    aria-label="{{ $recentPost->title }}"
+                                >
+                                    <img
+                                        src="{{ $recentPost->thumbnail->url }}"
+                                        alt="{{ $recentPost->thumbnail->alt_text ?: $recentPost->title }}"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </a>
+                            </div>
+                        @endif
+
+                        <div class="content-area">
+                            @if ($recentPost->published_at)
+                                <div class="user">
+                                    <i class="fal fa-clock" aria-hidden="true"></i>
+
+                                    <time datetime="{{ $recentPost->published_at->toDateString() }}">
+                                        {{ $recentPost->published_at->format('d M, Y') }}
+                                    </time>
                                 </div>
+                            @endif
 
+                            <h3 class="title recent-post-title">
+                                <a
+                                    class="post-title"
+                                    href="{{ localized_route('resources.show', [
+                                        'categorySlug' => $recentPost->category->slug,
+                                        'postSlug' => $recentPost->slug,
+                                    ]) }}"
+                                >
+                                    {{ $recentPost->title }}
+                                </a>
+                            </h3>
+                        </div>
 
-                                {{-- Recent Posts --}}
-                                <div class="rts-single-wized Recent-post">
-                                    <div class="wized-header">
-                                        <h5 class="title">
-                                            Recent Posts
-                                        </h5>
-                                    </div>
+                    </article>
+                @endforeach
+            </div>
+        </section>
+    @endif
 
-                                    <div class="wized-body">
-
-                                        @foreach ($recentPosts as $recentPost)
-
-                                            <div class="recent-post-single">
-
-                                                @if ($recentPost->thumbnail)
-                                                    <div class="thumbnail">
-                                                        <a href="{{ localized_route('resources.show', [
-                                                                    'categorySlug' => $recentPost->category->slug,
-                                                                    'postSlug' => $recentPost->slug,
-                                                                ]) }}">
-
-                                                            <img
-                                                                src="{{ $recentPost->thumbnail->url }}"
-                                                                alt="{{ $recentPost->thumbnail->alt_text ?: $recentPost->title }}"
-                                                            >
-
-                                                        </a>
-                                                    </div>
-                                                @endif
-
-                                                <div class="content-area">
-
-                                                    @if ($recentPost->published_at)
-                                                        <div class="user">
-                                                            <i class="fal fa-clock"></i>
-                                                            <span>
-                                                                {{ $recentPost->published_at->format('d M, Y') }}
-                                                            </span>
-                                                        </div>
-                                                    @endif
-
-                                                    <a
-                                                        class="post-title"
-                                                        href="{{ localized_route('resources.show', [
-                                                                'categorySlug' => $recentPost->category->slug,
-                                                                'postSlug' => $recentPost->slug,
-                                                            ]) }}"
-                        >
-                            <h6 class="title">
-                                {{ $recentPost->title }}
-                            </h6>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            @endforeach
-
-        </div>
-    </div>
-
-
-
-</div>
+</aside>

@@ -9,9 +9,9 @@
 
                         <div class="left-content">
                             @if (!empty($customerSection->title))
-                                        <h3 class="title">
+                                        <h2 class="title">
                                             {{ $customerSection->title }}
-                                        </h3>
+                                        </h2>
 
                             @endif
                             {!! $customerSection->content !!}
@@ -39,9 +39,9 @@
                         <div class="inner two">
                             <div class="left-content">
                                 @if (!empty($ownerSection->title))
-                                <h3 class="title">
+                                <h2 class="title">
                                     {{ $ownerSection->title }}
-                                </h3>
+                                </h2>
                                 @endif
                                 {!! $ownerSection->content !!}
                                 <ul class="tags">

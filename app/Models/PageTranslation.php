@@ -25,6 +25,8 @@ class PageTranslation extends Model
 
         'locale',
 
+        
+
         /*
         |--------------------------------------------------------------------------
         | Content
@@ -36,6 +38,10 @@ class PageTranslation extends Model
         'short_description',
 
         'content',
+
+        'subtitle',
+        
+        'excerpt',
 
         /*
         |--------------------------------------------------------------------------

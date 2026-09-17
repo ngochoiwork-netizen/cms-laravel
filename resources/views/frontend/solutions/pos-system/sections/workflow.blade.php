@@ -58,9 +58,9 @@
 
                                         <div class="working-process-wrapper-three">
 
-                                            <h5 class="title">
+                                            <h3 class="title">
                                                 {{ $step['title'] ?? '' }}
-                                            </h5>
+                                            </h3>
 
                                             <p class="disc">
                                                 {{ $step['description'] ?? '' }}
