@@ -1,9 +1,7 @@
 @if ($workflowSection)
-
     @php
         $workflowData = $workflowSection->data_json ?? [];
         $steps = $workflowData['steps'] ?? [];
-
         $stepCount = count($steps);
 
         $columnClass = match ($stepCount) {
@@ -16,13 +14,16 @@
         };
     @endphp
 
-    <!-- POS Integration start -->
-    <div class="rts-working-process-area merchant-pos-integration rts-section-gap">
-
+    <!-- Social media workflow start -->
+    <section
+        class="rts-working-process-area merchant-pos-integration rts-section-gap"
+        @if ($workflowSection->title)
+            aria-labelledby="social-media-workflow-title"
+        @endif
+    >
         <div class="container">
 
             <div class="row">
-
                 <div class="col-lg-12">
 
                     <div class="title-center-wrapper">
@@ -34,49 +35,47 @@
                         @endif
 
                         @if ($workflowSection->title)
-                            <h2 class="title rts-text-anime-style-1">
+                            <h2
+                                id="social-media-workflow-title"
+                                class="title rts-text-anime-style-1"
+                            >
                                 {{ $workflowSection->title }}
                             </h2>
                         @endif
 
                         @if ($workflowSection->content)
-                            <p class="disc">
+                            <div class="disc">
                                 {!! $workflowSection->content !!}
-                            </p>
+                            </div>
                         @endif
 
                     </div>
 
                 </div>
-
             </div>
 
             @if ($stepCount)
-
                 <div class="row mt--40">
-
                     <div class="col-lg-12">
 
                         <div class="working-process-three-main">
-
                             <div class="row g-5 {{ $stepCount === 5 ? 'workflow-five-columns' : '' }}">
 
                                 @foreach ($steps as $step)
-
                                     <div class="{{ $stepCount === 5 ? 'workflow-column' : $columnClass . ' col-md-6 col-sm-12' }}">
 
-                                        <div class="working-process-wrapper-three">
+                                        <article class="working-process-wrapper-three">
 
                                             @if (!empty($step['icon']))
-                                                <div class="step-icon">
+                                                <div class="step-icon" aria-hidden="true">
                                                     <i class="{{ $step['icon'] }}"></i>
                                                 </div>
                                             @endif
 
                                             @if (!empty($step['title']))
-                                                <h5 class="title">
+                                                <h3 class="title">
                                                     {{ $step['title'] }}
-                                                </h5>
+                                                </h3>
                                             @endif
 
                                             @if (!empty($step['description']))
@@ -85,25 +84,19 @@
                                                 </p>
                                             @endif
 
-                                        </div>
+                                        </article>
 
                                     </div>
-
                                 @endforeach
 
                             </div>
-
                         </div>
 
                     </div>
-
                 </div>
-
             @endif
 
         </div>
-
-    </div>
-    <!-- POS Integration end -->
-
+    </section>
+    <!-- Social media workflow end -->
 @endif

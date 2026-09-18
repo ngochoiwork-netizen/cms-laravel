@@ -2006,10 +2006,23 @@ body.demo-software-company
 .merchant-payment-methods
 .reason-wrapper
 .single-reason
-h5.title {
+h3.title {
+    margin: 0;
     color: var(--senverse-primary);
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
 }
 
+@media (max-width: 575px) {
+    body.demo-software-company
+    .merchant-payment-methods
+    .reason-wrapper
+    .single-reason
+    h3.title {
+        font-size: 16px !important;
+    }
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -4983,7 +4996,115 @@ body.demo-software-company
     body.demo-software-company
     #merchant-services-faq
     .accordion-button {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.5;
+    }
+}
+
+/* Trạng thái bình thường */
+body.demo-software-company
+.rts-service-area
+.single-service-security
+h3.title {
+    margin: 0 0 12px;
+    color: var(--senverse-primary);
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+    transition: color 0.3s ease;
+}
+
+body.demo-software-company
+.rts-service-area
+.single-service-security
+p.disc {
+    color: #667085;
+    transition: color 0.3s ease;
+}
+
+/* Hover thẻ */
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+    transform: translateY(-4px);
+}
+
+/* Tiêu đề chuyển sang trắng */
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+h3.title {
+    color: #ffffff;
+}
+
+/* Mô tả chuyển sang trắng */
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+p.disc {
+    color: #ffffff;
+}
+
+/* Icon chuyển sang trắng */
+body.demo-software-company
+.rts-service-area
+.single-service-security:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    body.demo-software-company
+    .rts-service-area
+    .single-service-security
+    h3.title {
+        font-size: 18px;
+    }
+}
+
+body.demo-software-company
+.merchant-pos-integration
+.working-process-wrapper-three
+h3.title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+@media (max-width: 575px) {
+    body.demo-software-company
+    .merchant-pos-integration
+    .working-process-wrapper-three
+    h3.title {
+        font-size: 18px;
+    }
+}
+
+body.demo-software-company
+.rts-faq-area
+.accordion-header {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+body.demo-software-company
+.rts-faq-area
+.accordion-header
+.accordion-button {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+@media (max-width: 575px) {
+    body.demo-software-company
+    .rts-faq-area
+    .accordion-header
+    .accordion-button {
+        font-size: 16px;
     }
 }

@@ -4,7 +4,10 @@
         $benefits = $benefitData['features'] ?? [];
     @endphp
 
-    <div class="why-chooseus-area merchant-payment-methods rts-section-gap bg-light-2">
+    <section
+        class="why-chooseus-area merchant-payment-methods rts-section-gap bg-light-2"
+        aria-labelledby="social-media-benefits-title"
+    >
         <div class="container">
             <div class="row">
 
@@ -20,7 +23,10 @@
                             @endif
 
                             @if ($benefitSection->title)
-                                <h2 class="title rts-text-anime-style-1">
+                                <h2
+                                    id="social-media-benefits-title"
+                                    class="title rts-text-anime-style-1"
+                                >
                                     {{ $benefitSection->title }}
                                 </h2>
                             @endif
@@ -28,37 +34,33 @@
                         </div>
 
                         @if ($benefitSection->content)
-                            <p class="disc">
+                            <div class="disc">
                                 {!! $benefitSection->content !!}
-                            </p>
+                            </div>
                         @endif
 
                         @if (!empty($benefits))
-
                             <div class="reason-wrapper">
 
                                 @foreach ($benefits as $item)
-
-                                    <div class="single-reason">
+                                    <article class="single-reason">
 
                                         @if (!empty($item['icon']))
-                                            <div class="icon">
+                                            <div class="icon" aria-hidden="true">
                                                 <i class="{{ $item['icon'] }}"></i>
                                             </div>
                                         @endif
 
                                         @if (!empty($item['title']))
-                                            <h5 class="title">
+                                            <h3 class="title">
                                                 {{ $item['title'] }}
-                                            </h5>
+                                            </h3>
                                         @endif
 
-                                    </div>
-
+                                    </article>
                                 @endforeach
 
                             </div>
-
                         @endif
 
                     </div>
@@ -67,23 +69,18 @@
                 <div class="offset-lg-1 col-lg-6">
 
                     @if ($benefitSection->image)
-
                         <div class="why-choose-iamge-two merchant-payment-image">
-
                             <img
                                 src="{{ asset('storage/' . $benefitSection->image->file_path) }}"
-                                alt="{{ $benefitSection->title ?? 'Benefits' }}"
+                                alt="{{ $benefitSection->title ?? 'Social media benefits for nail salons' }}"
                                 class="one"
                             >
-
                         </div>
-
                     @endif
 
                 </div>
 
             </div>
         </div>
-    </div>
-
+    </section>
 @endif
