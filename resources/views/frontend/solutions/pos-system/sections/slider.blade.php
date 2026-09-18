@@ -126,16 +126,12 @@
 
                         <div class="top">
 
-                            <div class="title h2">
-                                ALL-IN-ONE
-                            </div>
-
-                            <span class="info">
+                            <div class="title" style="font-size: 24px;">
                                 {{ $isVietnamese
-                                    ? 'Nền tảng quản lý tiệm nail'
-                                    : 'Nail Salon Management Platform'
+                                    ? 'POS TẤT CẢ TRONG MỘT'
+                                    : 'ALL-IN-ONE POS SYSTEM'
                                 }}
-                            </span>
+                            </div>
 
                         </div>
 
@@ -144,13 +140,17 @@
                             <p>
                                 {{ $slider?->subtitle
                                     ?? ($isVietnamese
-                                        ? 'Một nền tảng kết nối cho hoạt động quản lý tiệm nail hằng ngày.'
-                                        : 'One connected platform for daily nail salon management.')
+                                        ? 'Một nền tảng kết nối để quản lý toàn bộ hoạt động hằng ngày của tiệm nail.'
+                                        : 'One connected platform for managing your daily nail salon operations.')
                                 }}
                             </p>
 
-                            <a href="#" class="radious-btn">
+                            <a href="#pos-features"
+                            class="radious-btn"
+                            aria-label="{{ $isVietnamese ? 'Xem tính năng POS' : 'Explore POS features' }}">
+
                                 <i class="fa-sharp fa-light fa-arrow-up"></i>
+
                             </a>
 
                         </div>

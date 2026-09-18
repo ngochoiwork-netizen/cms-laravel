@@ -4562,3 +4562,428 @@ h3.title a {
     line-height: inherit;
     font-weight: inherit;
 }
+
+
+/* Benefit title – trạng thái bình thường */
+body.demo-software-company
+#merchant-benefits
+.single-service-security
+.merchant-benefit-title {
+    margin-bottom: 12px;
+    color: var(--senverse-primary) !important;
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+
+    transition: color 0.3s ease;
+}
+
+/* Benefit title – trạng thái hover */
+body.demo-software-company
+#merchant-benefits
+.single-service-security:hover
+.merchant-benefit-title {
+    color: #ffffff !important;
+}
+
+/* Màu mô tả khi hover */
+body.demo-software-company
+#merchant-benefits
+.single-service-security:hover
+p.disc {
+    color: #d7e0ea !important;
+}
+
+/* Màu icon khi hover */
+body.demo-software-company
+#merchant-benefits
+.single-service-security:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+@media (max-width: 767px) {
+    body.demo-software-company
+    #merchant-benefits
+    .single-service-security
+    .merchant-benefit-title {
+        font-size: 20px !important;
+    }
+}
+
+/* Payment method title */
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason
+.merchant-payment-option-title {
+    margin: 0;
+    color: var(--senverse-primary) !important;
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+}
+
+/* Payment method card */
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason:hover {
+    border-color: var(--senverse-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(27, 54, 93, 0.08);
+}
+
+/* Icon */
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason
+.icon {
+    background: #f2f6fa;
+    border-color: var(--senverse-border);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason
+.icon i {
+    color: var(--senverse-primary) !important;
+    transition: color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason:hover
+.icon {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+#merchant-payment-options
+.reason-wrapper
+.single-reason:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+@media (max-width: 767px) {
+    body.demo-software-company
+    #merchant-payment-options
+    .reason-wrapper
+    .single-reason
+    .merchant-payment-option-title {
+        font-size: 18px !important;
+    }
+}
+
+/* Workflow step */
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three {
+    position: relative;
+}
+
+/* Step number */
+body.demo-software-company
+#merchant-payment-workflow
+.merchant-step-number {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--senverse-light);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+/* Step title */
+body.demo-software-company
+#merchant-payment-workflow
+.merchant-workflow-step-title {
+    margin-bottom: 12px;
+    color: var(--senverse-primary) !important;
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+
+    transition: color 0.3s ease;
+}
+
+/* Step description */
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three
+p.disc {
+    color: #667085;
+}
+
+/* Step icon */
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three
+.step-icon {
+    background: #f2f6fa;
+    border: 1px solid var(--senverse-border);
+    border-radius: 50%;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three
+.step-icon i {
+    color: var(--senverse-primary) !important;
+    font-size: 20px;
+
+    transition: color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three:hover
+.step-icon {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+#merchant-payment-workflow
+.working-process-wrapper-three:hover
+.step-icon i {
+    color: #ffffff !important;
+}
+
+/* Highlight block */
+body.demo-software-company
+#merchant-payment-workflow
+.merchant-workflow-highlight {
+    padding: 28px 36px;
+    text-align: center;
+
+    background: #f2f6fa;
+    border: 1px solid var(--senverse-border);
+    border-radius: 16px;
+}
+
+body.demo-software-company
+#merchant-payment-workflow
+.merchant-workflow-highlight-title {
+    margin-bottom: 8px;
+    color: var(--senverse-primary) !important;
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+}
+
+body.demo-software-company
+#merchant-payment-workflow
+.merchant-workflow-highlight p {
+    margin: 0;
+    color: #667085;
+}
+
+@media (max-width: 767px) {
+    body.demo-software-company
+    #merchant-payment-workflow
+    .merchant-workflow-step-title {
+        font-size: 20px !important;
+    }
+
+    body.demo-software-company
+    #merchant-payment-workflow
+    .merchant-workflow-highlight {
+        padding: 24px 20px;
+    }
+
+    body.demo-software-company
+    #merchant-payment-workflow
+    .merchant-workflow-highlight-title {
+        font-size: 21px !important;
+    }
+}
+
+/* Payment management feature title */
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason
+.merchant-payment-management-feature-title {
+    margin: 0;
+    color: var(--senverse-primary) !important;
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+}
+
+/* Feature card */
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason {
+    background: #ffffff;
+    border: 1px solid var(--senverse-border);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason:hover {
+    border-color: var(--senverse-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(27, 54, 93, 0.08);
+}
+
+/* Feature icon */
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason
+.icon {
+    background: #f2f6fa;
+    border-color: var(--senverse-border);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason
+.icon i {
+    color: var(--senverse-primary) !important;
+    transition: color 0.3s ease;
+}
+
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason:hover
+.icon {
+    background: var(--senverse-primary);
+    border-color: var(--senverse-primary);
+}
+
+body.demo-software-company
+#merchant-payment-management
+.reason-wrapper
+.single-reason:hover
+.icon i {
+    color: #ffffff !important;
+}
+
+/* Responsive image */
+body.demo-software-company
+#merchant-payment-management
+.merchant-payment-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    body.demo-software-company
+    #merchant-payment-management
+    .reason-wrapper
+    .single-reason
+    .merchant-payment-management-feature-title {
+        font-size: 18px !important;
+    }
+}
+
+/* FAQ heading wrapper */
+body.demo-software-company
+#merchant-services-faq
+.accordion-header {
+    margin: 0;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+/* FAQ button */
+body.demo-software-company
+#merchant-services-faq
+.accordion-button {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    color: var(--senverse-primary);
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+/* Question number */
+body.demo-software-company
+#merchant-services-faq
+.merchant-faq-number {
+    flex: 0 0 auto;
+}
+
+/* Question text */
+body.demo-software-company
+#merchant-services-faq
+.merchant-faq-question {
+    flex: 1;
+}
+
+/* Answer */
+body.demo-software-company
+#merchant-services-faq
+.accordion-body p {
+    margin: 0;
+    color: #667085;
+}
+
+/* Keyboard focus */
+body.demo-software-company
+#merchant-services-faq
+.accordion-button:focus-visible {
+    position: relative;
+    z-index: 2;
+    outline: 3px solid var(--senverse-light);
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+@media (max-width: 767px) {
+    body.demo-software-company
+    #merchant-services-faq
+    .accordion-button {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}

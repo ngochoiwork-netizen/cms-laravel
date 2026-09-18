@@ -1,15 +1,32 @@
 @if ($faqSection)
-
     @php
         $faqData = $faqSection->data_json ?? [];
-        $faqs = $faqData['faqs'] ?? [];
+
+        $faqs = collect($faqData['faqs'] ?? [])
+            ->filter(function ($faq) {
+                return !empty($faq['question']);
+            })
+            ->values();
+
+        $isVietnamese = app()->getLocale() === 'vi';
+
+        $sectionLabel = $isVietnamese
+            ? 'Câu hỏi thường gặp về xử lý thanh toán cho tiệm nail'
+            : 'Frequently asked questions about nail salon payment processing';
     @endphp
 
-    @if (!empty($faqs))
+    @if ($faqs->isNotEmpty())
 
-        <!-- rts faq area start -->
-        <section class="rts-faq-area area-4 rts-section-gap">
-
+        <!-- Merchant Services FAQ start -->
+        <section
+            id="merchant-services-faq"
+            class="rts-faq-area area-4 rts-section-gap"
+            @if ($faqSection->title)
+                aria-labelledby="merchant-services-faq-title"
+            @else
+                aria-label="{{ $sectionLabel }}"
+            @endif
+        >
             <div class="container">
 
                 <div class="title-center-wrapper">
@@ -21,13 +38,15 @@
                     @endif
 
                     @if ($faqSection->title)
-                        <h2 class="title rts-text-anime-style-1">
+                        <h2
+                            id="merchant-services-faq-title"
+                            class="title rts-text-anime-style-1"
+                        >
                             {{ $faqSection->title }}
                         </h2>
                     @endif
 
                 </div>
-
 
                 <div class="section-inner mt--60">
 
@@ -35,66 +54,66 @@
                         class="accordion"
                         id="merchantFaqAccordion"
                     >
-
                         @foreach ($faqs as $index => $faq)
 
                             @php
-                                $faqId = 'merchantFaq' . $index;
+                                $faqNumber = $index + 1;
+                                $faqId = 'merchant-faq-' . $faqNumber;
+                                $headingId = $faqId . '-heading';
+                                $collapseId = $faqId . '-answer';
+                                $isFirstFaq = $index === 0;
                             @endphp
 
                             <div class="accordion-item">
 
-                                <h2
+                                <h3
                                     class="accordion-header"
-                                    id="heading{{ $faqId }}"
+                                    id="{{ $headingId }}"
                                 >
-
                                     <button
-                                        class="accordion-button {{ $index > 0 ? 'collapsed' : '' }}"
+                                        class="accordion-button {{ !$isFirstFaq ? 'collapsed' : '' }}"
                                         type="button"
                                         data-bs-toggle="collapse"
-                                        data-bs-target="#collapse{{ $faqId }}"
-                                        aria-expanded="{{ $index === 0 ? 'true' : 'false' }}"
-                                        aria-controls="collapse{{ $faqId }}"
+                                        data-bs-target="#{{ $collapseId }}"
+                                        aria-expanded="{{ $isFirstFaq ? 'true' : 'false' }}"
+                                        aria-controls="{{ $collapseId }}"
                                     >
+                                        <span
+                                            class="merchant-faq-number"
+                                            aria-hidden="true"
+                                        >
+                                            {{ str_pad($faqNumber, 2, '0', STR_PAD_LEFT) }}.
+                                        </span>
 
-                                        {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}.
-
-                                        {{ $faq['question'] ?? '' }}
-
+                                        <span class="merchant-faq-question">
+                                            {{ $faq['question'] }}
+                                        </span>
                                     </button>
-
-                                </h2>
-
+                                </h3>
 
                                 <div
-                                    id="collapse{{ $faqId }}"
-                                    class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}"
-                                    aria-labelledby="heading{{ $faqId }}"
+                                    id="{{ $collapseId }}"
+                                    class="accordion-collapse collapse {{ $isFirstFaq ? 'show' : '' }}"
+                                    aria-labelledby="{{ $headingId }}"
                                     data-bs-parent="#merchantFaqAccordion"
                                 >
-
                                     <div class="accordion-body">
-
-                                        {!! $faq['answer'] ?? '' !!}
-
+                                        <p>
+                                            {!! nl2br(e($faq['answer'] ?? '')) !!}
+                                        </p>
                                     </div>
-
                                 </div>
 
                             </div>
 
                         @endforeach
-
                     </div>
 
                 </div>
 
             </div>
-
         </section>
-        <!-- rts faq area end -->
+        <!-- Merchant Services FAQ end -->
 
     @endif
-
 @endif
